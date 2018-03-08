@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="py_1" language="groovy" pageWidth="467" pageHeight="255" columnWidth="467" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="alonecustomsign" class="java.lang.String">
+		<fieldDescription><![CDATA[alonecustomsign]]></fieldDescription>
+	</field>
+	<field name="bwbBw_labelcode" class="java.lang.String">
+		<fieldDescription><![CDATA[bwbBw_labelcode]]></fieldDescription>
+	</field>
+	<field name="ccoCo_code" class="java.lang.String">
+		<fieldDescription><![CDATA[ccoCo_code]]></fieldDescription>
+	</field>
+	<field name="ccoCo_labelcode" class="java.lang.String">
+		<fieldDescription><![CDATA[ccoCo_labelcode]]></fieldDescription>
+	</field>
+	<field name="chnChn_code" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_code]]></fieldDescription>
+	</field>
+	<field name="chnChn_customerlabel" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_customerlabel]]></fieldDescription>
+	</field>
+	<field name="chnChn_customlable" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_customlable]]></fieldDescription>
+	</field>
+	<field name="chnChn_mastreaccount" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_mastreaccount]]></fieldDescription>
+	</field>
+	<field name="chnChn_selflablecode" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_selflablecode]]></fieldDescription>
+	</field>
+	<field name="chnChn_sename" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_sename]]></fieldDescription>
+	</field>
+	<field name="chnChn_sname" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_sname]]></fieldDescription>
+	</field>
+	<field name="chnaChnaaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaaddress1]]></fieldDescription>
+	</field>
+	<field name="chnaChnaaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaaddress2]]></fieldDescription>
+	</field>
+	<field name="chnaChnaaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaaddress3]]></fieldDescription>
+	</field>
+	<field name="chnaChnamid" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnamid]]></fieldDescription>
+	</field>
+	<field name="chnaChnaprocessingaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaprocessingaddress1]]></fieldDescription>
+	</field>
+	<field name="chnaChnaprocessingaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaprocessingaddress2]]></fieldDescription>
+	</field>
+	<field name="chnaChnaprocessingaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaprocessingaddress3]]></fieldDescription>
+	</field>
+	<field name="chnaChncode" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChncode]]></fieldDescription>
+	</field>
+	<field name="ciciename1" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciename1]]></fieldDescription>
+	</field>
+	<field name="ciciename2" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciename2]]></fieldDescription>
+	</field>
+	<field name="cicipieces1" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cicipieces1]]></fieldDescription>
+	</field>
+	<field name="cicipieces2" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cicipieces2]]></fieldDescription>
+	</field>
+	<field name="ciciprice1" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciprice1]]></fieldDescription>
+	</field>
+	<field name="ciciprice2" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciprice2]]></fieldDescription>
+	</field>
+	<field name="ciciremark1" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciremark1]]></fieldDescription>
+	</field>
+	<field name="ciciremark2" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciremark2]]></fieldDescription>
+	</field>
+	<field name="ciciweight1" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciweight1]]></fieldDescription>
+	</field>
+	<field name="ciciweight2" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciweight2]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="cwCw_chargeweight" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_chargeweight]]></fieldDescription>
+	</field>
+	<field name="cwCw_createdate" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_createdate]]></fieldDescription>
+	</field>
+	<field name="cwCw_customerchargeweight" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_customerchargeweight]]></fieldDescription>
+	</field>
+	<field name="cwCw_customerewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_customerewbcode]]></fieldDescription>
+	</field>
+	<field name="cwCw_ewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_ewbcode]]></fieldDescription>
+	</field>
+	<field name="cwCw_pieces" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_pieces]]></fieldDescription>
+	</field>
+	<field name="cwCw_serverewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_serverewbcode]]></fieldDescription>
+	</field>
+	<field name="cwDt_code_signin" class="java.lang.String">
+		<fieldDescription><![CDATA[cwDt_code_signin]]></fieldDescription>
+	</field>
+	<field name="cwsCws_code" class="java.lang.String">
+		<fieldDescription><![CDATA[cwsCws_code]]></fieldDescription>
+	</field>
+	<field name="cwsCws_name" class="java.lang.String">
+		<fieldDescription><![CDATA[cwsCws_name]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="dtDt_ename" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_ename]]></fieldDescription>
+	</field>
+	<field name="dtDt_hubcode" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_hubcode]]></fieldDescription>
+	</field>
+	<field name="dtDt_name" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_name]]></fieldDescription>
+	</field>
+	<field name="dtDt_statecode" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_statecode]]></fieldDescription>
+	</field>
+	<field name="hwHw_attacheinfosign" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_attacheinfosign]]></fieldDescription>
+	</field>
+	<field name="hwHw_buyerid" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_buyerid]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddress1]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddress2]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddress3]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddressex" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddressex]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneecity" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneecity]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneecompany" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneecompany]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneefax" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneefax]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneename" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneename]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneenameex" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneenameex]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneepostcode" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneepostcode]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneetelephone" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneetelephone]]></fieldDescription>
+	</field>
+	<field name="hwHw_customerdeclaredate" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_customerdeclaredate]]></fieldDescription>
+	</field>
+	<field name="hwHw_customerlabelprintdate" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_customerlabelprintdate]]></fieldDescription>
+	</field>
+	<field name="hwHw_remark" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_remark]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperaddress1]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperaddress2]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperaddress3]]></fieldDescription>
+	</field>
+	<field name="hwHw_shippercompany" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shippercompany]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperfax" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperfax]]></fieldDescription>
+	</field>
+	<field name="hwHw_shippername" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shippername]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperpostcode" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperpostcode]]></fieldDescription>
+	</field>
+	<field name="hwHw_shippertelephone" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shippertelephone]]></fieldDescription>
+	</field>
+	<field name="hwHw_transactionid" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_transactionid]]></fieldDescription>
+	</field>
+	<field name="hw_signindate" class="java.lang.String">
+		<fieldDescription><![CDATA[hw_signindate]]></fieldDescription>
+	</field>
+	<field name="ihsIhs_code" class="java.lang.String">
+		<fieldDescription><![CDATA[ihsIhs_code]]></fieldDescription>
+	</field>
+	<field name="ihsIhs_name" class="java.lang.String">
+		<fieldDescription><![CDATA[ihsIhs_name]]></fieldDescription>
+	</field>
+	<field name="image" class="java.awt.image.BufferedImage">
+		<fieldDescription><![CDATA[image]]></fieldDescription>
+	</field>
+	<field name="originorderid" class="java.lang.String">
+		<fieldDescription><![CDATA[originorderid]]></fieldDescription>
+	</field>
+	<field name="pkPk_code" class="java.lang.String">
+		<fieldDescription><![CDATA[pkPk_code]]></fieldDescription>
+	</field>
+	<field name="pkPk_sename" class="java.lang.String">
+		<fieldDescription><![CDATA[pkPk_sename]]></fieldDescription>
+	</field>
+	<field name="pkPk_showserverewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[pkPk_showserverewbcode]]></fieldDescription>
+	</field>
+	<field name="plE1" class="java.lang.String">
+		<fieldDescription><![CDATA[plE1]]></fieldDescription>
+	</field>
+	<field name="plE2" class="java.lang.String">
+		<fieldDescription><![CDATA[plE2]]></fieldDescription>
+	</field>
+	<field name="plE3" class="java.lang.String">
+		<fieldDescription><![CDATA[plE3]]></fieldDescription>
+	</field>
+	<field name="plE4" class="java.lang.String">
+		<fieldDescription><![CDATA[plE4]]></fieldDescription>
+	</field>
+	<field name="plE5" class="java.lang.String">
+		<fieldDescription><![CDATA[plE5]]></fieldDescription>
+	</field>
+	<field name="plE6" class="java.lang.String">
+		<fieldDescription><![CDATA[plE6]]></fieldDescription>
+	</field>
+	<field name="plLcn" class="java.lang.String">
+		<fieldDescription><![CDATA[plLcn]]></fieldDescription>
+	</field>
+	<field name="plMailtype" class="java.lang.String">
+		<fieldDescription><![CDATA[plMailtype]]></fieldDescription>
+	</field>
+	<field name="plProduct" class="java.lang.String">
+		<fieldDescription><![CDATA[plProduct]]></fieldDescription>
+	</field>
+	<field name="plZipcode" class="java.lang.String">
+		<fieldDescription><![CDATA[plZipcode]]></fieldDescription>
+	</field>
+	<field name="scocode" class="java.lang.String">
+		<fieldDescription><![CDATA[scocode]]></fieldDescription>
+	</field>
+	<field name="scolabelcode" class="java.lang.String">
+		<fieldDescription><![CDATA[scolabelcode]]></fieldDescription>
+	</field>
+	<field name="scosename" class="java.lang.String">
+		<fieldDescription><![CDATA[scosename]]></fieldDescription>
+	</field>
+	<field name="strUri" class="java.lang.String">
+		<fieldDescription><![CDATA[strUri]]></fieldDescription>
+	</field>
+	<field name="totalPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[totalPrice]]></fieldDescription>
+	</field>
+	<field name="totalWeight" class="java.lang.Double">
+		<fieldDescription><![CDATA[totalWeight]]></fieldDescription>
+	</field>
+	<field name="znvznvname" class="java.lang.String">
+		<fieldDescription><![CDATA[znvznvname]]></fieldDescription>
+	</field>
+	<field name="chnChn_customlable_1" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_customlable]]></fieldDescription>
+	</field>
+	<field name="ciciattacheinfo1" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciattacheinfo1]]></fieldDescription>
+	</field>
+	<field name="ciciattacheinfo2" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciattacheinfo2]]></fieldDescription>
+	</field>
+	<field name="totalpieces" class="java.lang.Integer">
+		<fieldDescription><![CDATA[totalpieces]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="255" splitType="Stretch">
+			<rectangle>
+				<reportElement x="8" y="2" width="214" height="240"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="4" width="75" height="29"/>
+				<textElement>
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[CUSTOMS
+DECLARATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="5" width="75" height="29"/>
+				<textElement>
+					<font size="10" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[May be opened
+officially ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="6" width="35" height="27"/>
+				<textElement>
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[CN22]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="33" width="214" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="14" y="34" width="79" height="12"/>
+				<textElement>
+					<font size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Postal administration
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="37" width="53" height="16"/>
+				<textElement>
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Important!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="53" width="112" height="10"/>
+				<textElement>
+					<font size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[See instructions on the back
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="64" width="214" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="28" y="68" width="42" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Gift
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="14" y="68" width="10" height="10"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="81" width="10" height="10"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="81" width="42" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Documents
+
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="84" y="68" width="10" height="10"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="98" y="68" width="78" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Commricial sample
+
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="84" y="81" width="10" height="10"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="98" y="81" width="28" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[ Other
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="81" width="87" height="11"/>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Tick one of more boxes
+
+
+
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="94" width="214" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="14" y="96" width="99" height="22"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Quantity and detailed
+discription of contents (1)
+
+
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="144" y="94" width="1" height="95"/>
+			</line>
+			<staticText>
+				<reportElement x="146" y="96" width="30" height="22"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Weight
+(In kg) ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="178" y="94" width="1" height="95"/>
+			</line>
+			<staticText>
+				<reportElement x="180" y="94" width="41" height="22"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[ value
+(3)$]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="117" width="214" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="14" y="118" width="80" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciename1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="128" width="81" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciename2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="95" y="118" width="22" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciattacheinfo1}==null?null:"("+$F{ciciattacheinfo1}+")"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="95" y="128" width="22" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciattacheinfo2}==null?null:"("+$F{ciciattacheinfo2}+")"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="116" y="118" width="27" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciremark1}==null?null:"("+$F{ciciremark1}+")"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="116" y="128" width="27" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciremark2}==null?null:"("+$F{ciciremark2}+")"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="146" y="118" width="30" height="11"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{ciciweight1}==0.0?null:$F{ciciweight1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="146" y="128" width="30" height="11"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{ciciweight2}==0.0?null:$F{ciciweight2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="119" width="41" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{ciciprice1}==0.0?null:$F{ciciprice1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="129" width="41" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{ciciprice2}==0.0?null:$F{ciciprice2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="8" y="141" width="214" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="14" y="144" width="129" height="34"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[For commercial iterms only if
+known,HS tariffnurmber(4) and
+country of oright of goods(5)
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="178" width="136" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="14" y="179" width="50" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total Pieces(]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="180" width="25" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{totalpieces}==0.0?null:$F{totalpieces}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="93" y="179" width="5" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="189" width="214" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.2"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="145" y="144" width="33" height="34"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total
+Weight
+(In kg)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="177" width="5" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="177" width="6" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="168" width="31" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{totalPrice}==0.0?null:$F{totalPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="154" width="41" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[total value
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="167" width="6" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="166" width="5" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="178" width="23" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{totalWeight}==0.0?null:$F{totalWeight}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="191" width="208" height="49"/>
+				<textElement>
+					<font size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[I,the undersigned,whose name and address are given on the
+item, certify that particulars given in this declaration are correct
+and that this item dose not contain any dangerous article or
+artices prohibired by legisation or by postal or customs
+regulations Date and sender's signature(8)
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="241" y="4" width="105" height="31"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="242" y="3" width="100" height="33"/>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[IF UNDELIVERED PLEASE
+RETURN TO KEA BOX
+68203 HONG KONG
+
+
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="350" y="4" width="105" height="31"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="355" y="2" width="64" height="33"/>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[POSTAGE PAID
+  HONG KONG
+   POST PAYE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="3" width="31" height="33"/>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[PERMIT
+NO.
+28 ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="420" y="4" width="1" height="31"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="350" y="40" width="105" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="352" y="40" width="64" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="8" isBold="false" isUnderline="false" isStrikeThrough="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[BY  AIR MAIL
+航 PARAVION 空]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="60" width="13" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[To:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="256" y="60" width="123" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneename}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="256" y="70" width="196" height="11"/>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneeaddress1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="256" y="80" width="196" height="11"/>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneeaddress2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="256" y="90" width="196" height="11"/>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneeaddress3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="257" y="101" width="51" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneecity}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="316" y="101" width="73" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneepostcode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="257" y="112" width="100" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dtDt_ename}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="244" y="125" width="18" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Tel:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="125" width="100" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneetelephone}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="245" y="141" width="41" height="24"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="245" y="140" width="41" height="11"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[zone]]></text>
+			</staticText>
+			<line>
+				<reportElement x="245" y="152" width="41" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="246" y="154" width="40" height="11"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{znvznvname}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="245" y="167" width="41" height="24"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="246" y="169" width="40" height="20"/>
+				<textElement>
+					<font fontName="宋体" size="8" isBold="false" isUnderline="false" isStrikeThrough="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[香港小包
+平邮
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="288" y="141" width="166" height="50"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="293" y="152" width="138" height="11"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cwCw_ewbcode}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="293" y="165" width="157" height="24"/>
+				<imageExpression class="java.awt.Image"><![CDATA[$F{image}]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="245" y="192" width="209" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="287" y="192" width="14" height="12"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="193" width="32" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ccoCo_labelcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="226" width="100" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="247" y="192" width="14" height="12"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="193" width="37" height="12"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ref  No: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="339" y="193" width="100" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cwCw_customerewbcode}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="245" y="209" width="209" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.6"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="MM/dd HH:mm:ss">
+				<reportElement x="340" y="210" width="100" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

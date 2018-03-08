@@ -1,0 +1,76 @@
+/* CSS Document */
+#page{ width:1000px; margin:0 auto; padding-top:20px;}
+#page .left{ float:left; width:240px;}
+#page .right{ float:right; width:740px;}
+/*-------内页左侧目录------*/
+.directory{ width:100%;}
+.directory .tit{ display:block; width:100%; height:54px; background:url(../images/news.jpg);}
+.directory .tit01{ display:block; width:100%; height:54px; background:url(../images/navigation.jpg);}
+.directory .nir{ width:238px; border:1px solid #dedede; border-bottom:none;}
+.directory ul li{ width:208px; padding-left:30px; height:38px; line-height:38px; border-bottom:1px solid #dedede; font-size:14px;}
+.directory ul li a{ display:block; width:188px; padding-left:20px; background:url(../images/icon_02.png) no-repeat left center; color:#333;}
+.directory ul li a:hover{ width:188px; padding-left:20px; background:url(../images/icon_01.png) no-repeat left center; color:#d32994;}
+/*------内页左侧联系我们------*/
+.contact{ width:100%; padding-top:20px;}
+.contact span{ display:block; width:240px; height:54px; background:url(../images/contact.jpg);}
+.contact .nir{ border:1px solid #dedede; background:#dedede;}
+.contact p{ padding:10px 20px; line-height:24px;}
+/*------内页右侧------*/
+#page .right .tit,#page .right .tit01{ width:720px; color:#FFF; font-size:16px; font-weight:bold; padding-left:20px; height:40px; line-height:40px; background:url(../images/page_title01.jpg);}
+#page .right .tit{ width:720px; color:#FFF; font-size:16px; font-weight:bold; padding-left:20px; height:40px; line-height:40px; background:url(../images/page_title01.jpg);}
+#page .right .tit01{background:url(../images/page_title02.jpg);}
+#page .right .nir{ border:1px solid #dedede; padding:20px; width:698px;}
+/*--新闻列表--*/
+.news ul{ width:698px;}
+.news ul li{ width:683px; height:32px; line-height:32px; background:url(../images/icon_03.png) no-repeat left center; padding-left:15px; border-bottom:1px dashed #999999;}
+.news ul li a{ color:#333;}
+.news ul li span{ float:right;}
+.pagelist { height:30px; padding-top:20px; border-top:none; background:#fff;}
+.pagelist ul { float:right;}
+.pagelist ul li {float:left; font-family:Tahoma; line-height:22px; height:22px; margin-left:5px; font-size:12px;  border:1px solid #999999; padding:0px 8px; width:auto;}
+.pagelist ul li a{ color:#333;}
+.pagelist ul li a:hover {color:#d32994; text-decoration:none;}
+.pagelist ul li.thisclass, .pagelist ul li.thisclass a, .pagelist ul li.thisclass a:hover {color:#d32994;}
+.pagelist .pageinfo { line-height:21px; padding:12px 5px 10px 5px; color:#999;}
+.pagelist .pageinfo strong { color:#555; font-weight:normal;margin:0px 2px;}
+/*--新闻单页--*/
+.new_page{ width:698px;}
+.new_page .new_tit{ text-align:center; line-height:30px; color:#666666; padding-bottom:10px; border-bottom:1px solid #dedede;}
+.new_page .new_tit h3{ font-size:16px; color:#02abee; font-weight:bold;}
+.new_page .article{ padding:10px 0;}
+.new_page .article p{ text-indent:2em; font-size:14px; line-height:26px; padding:3px 0;}
+.new_page .prompt{ text-align:center; padding-top:20px; color:#666666;}
+.new_page .prompt span{ color:#d32994;}
+
+/*--货物追踪--*/
+.track{ width:698px;}
+.track .nir{ height:220px;}
+.track .track_left{ width:378px; float:left; padding-right:20px;}
+.track .track_center{width:140px; float:left; color:#666666; font-size:14px; font-weight:bold; text-align:center}
+.track .track_right{ width:140px; float:right; color:#02abee; font-size:14px; text-align:center;}
+.track .track_left .input_3{ width:358px; padding:10px; height:111px; background:url(../images/search_bg.png); border:none; font-size:14px; color:#999999; line-height:22px; overflow-y:hidden; border-radius:6px; resize: none; outline: none; }
+.track .track_left input{ margin-top:10px; padding-left:5px; background:#FFF; border:1px solid #dddddd; width:120px; height:28px; line-height:28px; float:left;}
+.track .track_left span{ display:block; float:left; width:85px; height:30px; margin-top:10px; margin-left:20px;}
+.track .track_left .check_but{ width:168px; margin-top:20px; height:45px; background:url(../images/query01.jpg); border:none;}
+.result{ padding-top:20px;}
+
+
+/*--机场三字码--*/
+.airport_td .td_input{background-position: left -814px;border: 1px solid #ddd; height:26px; line-height:26px; padding-left:5px;}
+.airport_td .airport_but{width:62px;height:28px;line-height:28px; background:#d32994;border:none;color:#FFF;}
+.airport_td td{ line-height:28px;}
+
+/*海关编码查询*/
+.airport_td .hs_search{ background:#f3f3f3; border: 1px solid #eaeaea; padding: 10px 0 15px 170px; overflow: hidden; height: 100%;}
+#hs_input_txt{ padding-top:10px;}
+.airport_td .hs_search  label{ padding-right: 50px; line-height: 24px;}
+.airport_td .hs_search .search_txt{float:left; width: 300px; height: 34px; border: 1px solid #ddd; margin-right:5px; padding-left:5px ; /*text-indent: 10px;*/}
+.airport_td .hs_search .btnQuery{float:left;background:url(../images/hs_button_bg.png) no-repeat; width: 80px; height: 35px; border: 0; color: #fff; font-size: 16px; cursor: pointer;}
+.airport_td .hs_list{ margin-top: 10px;}
+.airport_td .hs_list table{border-collapse:collapse; width: 698px; }
+.airport_td .hs_list tr td{ height: 30px; border: 1px solid #ddd; text-align: center; }
+.airport_td .hs_list .hs_title{ font-weight: bold; background: #39bdf1; }
+.airport_td .hs_list .hs_title td{color: #fff;}
+.airport_td .hs_list tr:hover{ background: #f3f3f3;}
+.airport_td .hs_list .hs_title:hover{background:#39bdf1;}
+.btn_key1{padding:0px 10px;height:35px; line-height:28px;font-size:14px;color:#fff; border:none; background:#d32994; font-weight:bold;}

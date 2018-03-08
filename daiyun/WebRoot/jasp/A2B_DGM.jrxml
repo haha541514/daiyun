@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="425" pageHeight="283" columnWidth="425" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.7715610000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="alonecustomsign" class="java.lang.String">
+		<fieldDescription><![CDATA[alonecustomsign]]></fieldDescription>
+	</field>
+	<field name="bwbBw_labelcode" class="java.lang.String">
+		<fieldDescription><![CDATA[bwbBw_labelcode]]></fieldDescription>
+	</field>
+	<field name="ccoCo_code" class="java.lang.String">
+		<fieldDescription><![CDATA[ccoCo_code]]></fieldDescription>
+	</field>
+	<field name="ccoCo_labelcode" class="java.lang.String">
+		<fieldDescription><![CDATA[ccoCo_labelcode]]></fieldDescription>
+	</field>
+	<field name="chnChn_code" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_code]]></fieldDescription>
+	</field>
+	<field name="chnChn_customerlabel" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_customerlabel]]></fieldDescription>
+	</field>
+	<field name="chnChn_customlable" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_customlable]]></fieldDescription>
+	</field>
+	<field name="chnChn_mastreaccount" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_mastreaccount]]></fieldDescription>
+	</field>
+	<field name="chnChn_selflablecode" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_selflablecode]]></fieldDescription>
+	</field>
+	<field name="chnChn_sename" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_sename]]></fieldDescription>
+	</field>
+	<field name="chnChn_sname" class="java.lang.String">
+		<fieldDescription><![CDATA[chnChn_sname]]></fieldDescription>
+	</field>
+	<field name="chnaChnaaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaaddress1]]></fieldDescription>
+	</field>
+	<field name="chnaChnaaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaaddress2]]></fieldDescription>
+	</field>
+	<field name="chnaChnaaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaaddress3]]></fieldDescription>
+	</field>
+	<field name="chnaChnamid" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnamid]]></fieldDescription>
+	</field>
+	<field name="chnaChnaprocessingaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaprocessingaddress1]]></fieldDescription>
+	</field>
+	<field name="chnaChnaprocessingaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaprocessingaddress2]]></fieldDescription>
+	</field>
+	<field name="chnaChnaprocessingaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChnaprocessingaddress3]]></fieldDescription>
+	</field>
+	<field name="chnaChncode" class="java.lang.String">
+		<fieldDescription><![CDATA[chnaChncode]]></fieldDescription>
+	</field>
+	<field name="ciciattacheinfo1" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciattacheinfo1]]></fieldDescription>
+	</field>
+	<field name="ciciattacheinfo2" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciattacheinfo2]]></fieldDescription>
+	</field>
+	<field name="ciciename1" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciename1]]></fieldDescription>
+	</field>
+	<field name="ciciename2" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciename2]]></fieldDescription>
+	</field>
+	<field name="cicipieces1" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cicipieces1]]></fieldDescription>
+	</field>
+	<field name="cicipieces2" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cicipieces2]]></fieldDescription>
+	</field>
+	<field name="ciciprice1" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciprice1]]></fieldDescription>
+	</field>
+	<field name="ciciprice2" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciprice2]]></fieldDescription>
+	</field>
+	<field name="ciciremark1" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciremark1]]></fieldDescription>
+	</field>
+	<field name="ciciremark2" class="java.lang.String">
+		<fieldDescription><![CDATA[ciciremark2]]></fieldDescription>
+	</field>
+	<field name="ciciweight1" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciweight1]]></fieldDescription>
+	</field>
+	<field name="ciciweight2" class="java.lang.Double">
+		<fieldDescription><![CDATA[ciciweight2]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="cwCw_chargeweight" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_chargeweight]]></fieldDescription>
+	</field>
+	<field name="cwCw_createdate" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_createdate]]></fieldDescription>
+	</field>
+	<field name="cwCw_customerchargeweight" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_customerchargeweight]]></fieldDescription>
+	</field>
+	<field name="cwCw_customerewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_customerewbcode]]></fieldDescription>
+	</field>
+	<field name="cwCw_ewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_ewbcode]]></fieldDescription>
+	</field>
+	<field name="cwCw_pieces" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_pieces]]></fieldDescription>
+	</field>
+	<field name="cwCw_serverewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[cwCw_serverewbcode]]></fieldDescription>
+	</field>
+	<field name="cwDt_code_signin" class="java.lang.String">
+		<fieldDescription><![CDATA[cwDt_code_signin]]></fieldDescription>
+	</field>
+	<field name="cwsCws_code" class="java.lang.String">
+		<fieldDescription><![CDATA[cwsCws_code]]></fieldDescription>
+	</field>
+	<field name="cwsCws_name" class="java.lang.String">
+		<fieldDescription><![CDATA[cwsCws_name]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="dtDt_ename" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_ename]]></fieldDescription>
+	</field>
+	<field name="dtDt_hubcode" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_hubcode]]></fieldDescription>
+	</field>
+	<field name="dtDt_name" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_name]]></fieldDescription>
+	</field>
+	<field name="dtDt_statecode" class="java.lang.String">
+		<fieldDescription><![CDATA[dtDt_statecode]]></fieldDescription>
+	</field>
+	<field name="hwHw_attacheinfosign" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_attacheinfosign]]></fieldDescription>
+	</field>
+	<field name="hwHw_buyerid" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_buyerid]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddress1]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddress2]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddress3]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneeaddressex" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneeaddressex]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneecity" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneecity]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneecompany" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneecompany]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneefax" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneefax]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneename" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneename]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneenameex" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneenameex]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneepostcode" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneepostcode]]></fieldDescription>
+	</field>
+	<field name="hwHw_consigneetelephone" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_consigneetelephone]]></fieldDescription>
+	</field>
+	<field name="hwHw_customerdeclaredate" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_customerdeclaredate]]></fieldDescription>
+	</field>
+	<field name="hwHw_customerlabelprintdate" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_customerlabelprintdate]]></fieldDescription>
+	</field>
+	<field name="hwHw_remark" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_remark]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperaddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperaddress1]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperaddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperaddress2]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperaddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperaddress3]]></fieldDescription>
+	</field>
+	<field name="hwHw_shippercompany" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shippercompany]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperfax" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperfax]]></fieldDescription>
+	</field>
+	<field name="hwHw_shippername" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shippername]]></fieldDescription>
+	</field>
+	<field name="hwHw_shipperpostcode" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shipperpostcode]]></fieldDescription>
+	</field>
+	<field name="hwHw_shippertelephone" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_shippertelephone]]></fieldDescription>
+	</field>
+	<field name="hwHw_transactionid" class="java.lang.String">
+		<fieldDescription><![CDATA[hwHw_transactionid]]></fieldDescription>
+	</field>
+	<field name="hw_signindate" class="java.lang.String">
+		<fieldDescription><![CDATA[hw_signindate]]></fieldDescription>
+	</field>
+	<field name="ihsIhs_code" class="java.lang.String">
+		<fieldDescription><![CDATA[ihsIhs_code]]></fieldDescription>
+	</field>
+	<field name="ihsIhs_name" class="java.lang.String">
+		<fieldDescription><![CDATA[ihsIhs_name]]></fieldDescription>
+	</field>
+	<field name="image" class="java.awt.image.BufferedImage">
+		<fieldDescription><![CDATA[image]]></fieldDescription>
+	</field>
+	<field name="image2" class="java.awt.image.BufferedImage">
+		<fieldDescription><![CDATA[image2]]></fieldDescription>
+	</field>
+	<field name="originorderid" class="java.lang.String">
+		<fieldDescription><![CDATA[originorderid]]></fieldDescription>
+	</field>
+	<field name="pkPk_code" class="java.lang.String">
+		<fieldDescription><![CDATA[pkPk_code]]></fieldDescription>
+	</field>
+	<field name="pkPk_sename" class="java.lang.String">
+		<fieldDescription><![CDATA[pkPk_sename]]></fieldDescription>
+	</field>
+	<field name="pkPk_showserverewbcode" class="java.lang.String">
+		<fieldDescription><![CDATA[pkPk_showserverewbcode]]></fieldDescription>
+	</field>
+	<field name="plE1" class="java.lang.String">
+		<fieldDescription><![CDATA[plE1]]></fieldDescription>
+	</field>
+	<field name="plE2" class="java.lang.String">
+		<fieldDescription><![CDATA[plE2]]></fieldDescription>
+	</field>
+	<field name="plE3" class="java.lang.String">
+		<fieldDescription><![CDATA[plE3]]></fieldDescription>
+	</field>
+	<field name="plE4" class="java.lang.String">
+		<fieldDescription><![CDATA[plE4]]></fieldDescription>
+	</field>
+	<field name="plE5" class="java.lang.String">
+		<fieldDescription><![CDATA[plE5]]></fieldDescription>
+	</field>
+	<field name="plE6" class="java.lang.String">
+		<fieldDescription><![CDATA[plE6]]></fieldDescription>
+	</field>
+	<field name="plLcn" class="java.lang.String">
+		<fieldDescription><![CDATA[plLcn]]></fieldDescription>
+	</field>
+	<field name="plMailtype" class="java.lang.String">
+		<fieldDescription><![CDATA[plMailtype]]></fieldDescription>
+	</field>
+	<field name="plProduct" class="java.lang.String">
+		<fieldDescription><![CDATA[plProduct]]></fieldDescription>
+	</field>
+	<field name="plZipcode" class="java.lang.String">
+		<fieldDescription><![CDATA[plZipcode]]></fieldDescription>
+	</field>
+	<field name="scocode" class="java.lang.String">
+		<fieldDescription><![CDATA[scocode]]></fieldDescription>
+	</field>
+	<field name="scolabelcode" class="java.lang.String">
+		<fieldDescription><![CDATA[scolabelcode]]></fieldDescription>
+	</field>
+	<field name="scosename" class="java.lang.String">
+		<fieldDescription><![CDATA[scosename]]></fieldDescription>
+	</field>
+	<field name="strUri" class="java.lang.String">
+		<fieldDescription><![CDATA[strUri]]></fieldDescription>
+	</field>
+	<field name="totalPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[totalPrice]]></fieldDescription>
+	</field>
+	<field name="totalWeight" class="java.lang.Double">
+		<fieldDescription><![CDATA[totalWeight]]></fieldDescription>
+	</field>
+	<field name="totalpieces" class="java.lang.Integer">
+		<fieldDescription><![CDATA[totalpieces]]></fieldDescription>
+	</field>
+	<field name="znvznvname" class="java.lang.String">
+		<fieldDescription><![CDATA[znvznvname]]></fieldDescription>
+	</field>
+	<field name="ckCk_code" class="java.lang.String"/>
+	<columnFooter>
+		<band height="283" splitType="Stretch">
+			<line>
+				<reportElement x="5" y="9" width="415" height="1"/>
+			</line>
+			<line>
+				<reportElement x="5" y="9" width="1" height="260"/>
+			</line>
+			<line>
+				<reportElement x="420" y="9" width="1" height="260"/>
+			</line>
+			<line>
+				<reportElement x="212" y="9" width="1" height="260"/>
+			</line>
+			<line>
+				<reportElement x="5" y="269" width="415" height="1"/>
+			</line>
+			<line>
+				<reportElement x="8" y="59" width="200" height="1"/>
+			</line>
+			<line>
+				<reportElement x="8" y="265" width="200" height="1"/>
+			</line>
+			<line>
+				<reportElement x="8" y="59" width="1" height="206"/>
+			</line>
+			<line>
+				<reportElement x="208" y="59" width="1" height="206"/>
+			</line>
+			<line>
+				<reportElement x="8" y="85" width="200" height="1"/>
+			</line>
+			<line>
+				<reportElement x="8" y="115" width="200" height="1"/>
+			</line>
+			<line>
+				<reportElement x="8" y="165" width="200" height="1"/>
+			</line>
+			<line>
+				<reportElement x="8" y="195" width="200" height="1"/>
+			</line>
+			<line>
+				<reportElement x="8" y="235" width="200" height="1"/>
+			</line>
+			<image scaleImage="FillFrame">
+				<reportElement x="26" y="22" width="136" height="25"/>
+				<imageExpression class="java.awt.Image"><![CDATA[$F{image}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="280" y="11" width="137" height="56"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{strUri}+"/images/DE.jpg"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="244" y="185" width="165" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneename}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="195" width="184" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneeaddress1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="205" width="184" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneeaddress2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="215" width="184" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneeaddress3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="225" width="184" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneecity}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="235" width="184" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hwHw_consigneepostcode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="245" width="184" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dtDt_ename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="180" width="61" height="11"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cwCw_customerchargeweight}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="180" width="40" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="147" width="124" height="12"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciename2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="10" y="134" width="124" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciename1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="166" y="147" width="38" height="11"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{ciciprice2}==0.0?null:$F{ciciprice2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="157" y="117" width="40" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="7" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Value
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="166" y="134" width="38" height="11"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{ciciprice1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="219" y="75" width="100" height="28"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[PACKET
+STANDARD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="117" width="132" height="12"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detailed discription of contents]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="60" width="109" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUSTOMS DECLARATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="60" width="24" height="12"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CN22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="74" width="155" height="11"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Postal administration(May be opened officially)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="73" width="40" height="12"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[important!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="88" width="26" height="14"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Gift]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="88" width="85" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Commercial sample]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="101" width="50" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Documents]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="101" width="105" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Others(Tick as appropriate)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="166" width="55" height="14"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Origin country]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="166" width="61" height="14"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total Weight(kg)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="167" width="45" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="197" width="192" height="39"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[I, hereby undersigned whose name and address are given on the
+item certify that the particulars given in the declaration are correct
+and that this item does not contain any dangerous articles or
+articles prohibited by legislation or by postal or customs
+regulatrions.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="237" width="124" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Date and Sender's signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="247" width="50" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[x40]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="180" width="24" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="142" y="122" width="1" height="73"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="252" width="100" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="13" y="88" width="10" height="10"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{strUri}+"/images/myImages/checkbox1.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="13" y="101" width="10" height="10"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{strUri}+"/images/myImages/checkbox1.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="85" y="88" width="10" height="10"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{strUri}+"/images/myImages/checkbox1.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="85" y="101" width="10" height="10"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{strUri}+"/images/myImages/checkbox2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="14" y="9" width="155" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer reference]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="185" width="19" height="12"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="34" y="48" width="120" height="11"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cwCw_customerewbcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="134" width="22" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciename1} == null ? "" : $F{ckCk_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="147" width="22" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ciciename2} == null ? "" : $F{ckCk_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="180" width="25" height="11"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ckCk_code}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

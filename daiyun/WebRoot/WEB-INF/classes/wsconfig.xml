@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- 解码器 -->
+	<global-decoder class="org.ws.coder.DefaultDecoder" />
+	<decoder name="kyleDecoder" class="com.baiqian.web.mobilesv.coder.KyleDecoder" />
+
+	<!-- 编码器 -->
+	<global-encoder class="com.daiyun.web.mobilesv.coder.GlobalEncoder" />
+
+	<!-- 错误处理 -->
+	<global-error class="com.daiyun.web.mobilesv.GlobalError" />
+
+	<!-- 服务 -->
+	<bean name="DictionaryService" class="com.daiyun.web.mobilesv.service.DictionaryService">
+		<!-- 查询客户 -->
+		<action name="queryCustomers" method="queryCustomers">
+			<param class="java.lang.String" />
+		</action>
+		<!-- 查询产品 -->
+		<action name="queryProductKind" method="queryProductKind">
+			<param class="java.lang.String" />
+		</action>
+		<!-- 查询国家 -->
+		<action name="queryAllCountry" method="queryAllCountry" />
+		<!-- 查询付费类型 -->
+		<action name="queryPayType" method="queryPayType" />
+		<!-- 查询体积重系数 -->
+		<action name="getVolumeRate" method="getVolumeRate">
+			<param class="java.lang.String" />
+		</action>
+	</bean>
+	<bean name="ArrivalBWService" class="com.daiyun.web.mobilesv.service.ArrivalBWService">
+		<!-- 获取收货主单 -->
+		<action name="getReceiptMainCode" method="getReceiptMainCode">
+			<param class="com.daiyun.web.mobilesv.condition.BatchWBCondition" />
+		</action>
+		<!-- 生成主单 -->
+		<action name="createReceiptMainCode" method="createReceiptMainCode">
+			<param class="com.daiyun.web.mobilesv.vo.BatchWayBillVO" />
+			<param class="java.lang.String" />
+			<param class="boolean" />
+		</action>
+	</bean>
+	<bean name="HousewaybillService" class="com.daiyun.web.mobilesv.service.HousewaybillService">
+		<!-- 签收 -->
+		<action name="signIn" method="signIn">
+			<param class="kyle.common.connectors.util.Decoder" decoder="kyleDecoder" />
+		</action>
+	</bean>
+</beans>
+
+
+
+

@@ -1,0 +1,92 @@
+/* CSS Document */
+*{ padding:0px; margin:0px;}
+html{ background:#ffffff;}
+img{ border:none;}  
+a{ text-decoration:none;}
+ul{ list-style:none;}
+table,td{ font-size:12px; color:#555; font-family:"Microsoft Yahei";}
+input,select,button{ font:12px Verdana,Arial,Tahoma; vertical-align:middle;}
+select{ border:none;}
+button{cursor: pointer;}
+/*------会员登录------*/
+#member a{ text-decoration:none;}
+#member{ width:100%;font-size:12px; color:#555;}
+#member .top{ width:1000px; height:100px; margin:0 auto;}
+#member .top .left{ float:left;}
+#member .top .right{ float:right; padding-top:60px;}
+#member .top .right a{ font-size:14px; color:#00afee;}
+#member .member_bg{ width:100%; height:500px; background:url(../images/m_bg.jpg) no-repeat;}
+#member .member_bg2{ width:1000px; margin:0 auto; position:relative;}
+#member .member{ width:275px; padding:20px 90px; height:365px; background:url(../images/m_background.png) no-repeat; position:absolute; left:545px; top:100px;}
+#member .member .title h3{ text-align:center; font-size:18px; font-weight:normal; height:30px; line-height:30px;}
+#member .member .title span{ color:#02abee; height:30px; line-height:30px;}
+#member .menber ul{ list-style:none;}
+#member .member ul li{ margin:13px 0;}
+#member .member ul li.name input{ padding-left:35px; width:227px; height:36px; line-height:36px; border:none; background:url(../images/m_name.png) no-repeat;}
+#member .member ul li.password input{ padding-left:35px; width:227px; height:36px; line-height:36px; background:url(../images/m_password.png) no-repeat; border:none;}
+#member .member ul li .Button{ width:262px; height:36px; line-height:36px; border:none; background:url(../images/m_login.png) no-repeat;}
+#member .member ul li.no{ text-align:center; color:#d42c96;}
+#member .member ul li.no a{ color:#d42c96; padding:0 2px;}
+#member .member ul li.no a:hover{ color:#d42c96;}
+#member .member .way{ margin-top:5px; padding:10px; width:240px; height:30px; background:#f2f3f4; border:1px solid #e5e5e5;}
+#member .member .way a{ padding-right:5px;}
+#member .bottom{ margin-top:80px; color:#7f7f7f; text-align:center; line-height:24px;}
+/*------会员注册------*/
+#register { width:100%; background:#f2f3f4; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5;}
+#register .register{ width:900px; margin:0 auto; height:450px;}
+#register .register .left{ float:left; width:550px;}
+#register .register .right{ float:right; width:250px;}
+#register .register ul{ padding:20px 0;}
+
+/***********2016-12-06 Start by wukq***************/
+#register .register ul li{ width:540px; overflow:hidden; padding:10px 0;}
+#register .register ul li strong{ color:#F00; padding:0 3px;}
+#register .register ul li input{ width:260px;}
+#register .register ul li span{ display:block;width:100px; float:left; font-size:14px; text-align:right; padding-right:15px;}
+#register .register .r_commInfo{ margin-left:120px; margin-top:20px; width:228px; background:url(../images/r_compInfo.png); height:45px;  border:none;}
+
+/***********2016-12-06 End***************/
+#register .register .text { float:left; width:248px; height:30px; padding-left:5px; line-height:30px; border: #bbb 1px solid;}
+#register .register .code{ width:100px;}
+#register .register .r_but{ border:none; width:138px; background:#01b0ee; height:24px; line-height:24px; color:#FFF; margin-left:10px; margin-top:4px;}
+#register .register .r_reg{ margin-left:120px; margin-top:20px; width:168px; height:45px; background:url(../images/r_login.jpg); border:none;}
+#register .register .enjoy h3{ color:#d32994; font-size:14px; height:30px; line-height:30px;}
+#register .register .enjoy p{ line-height:24px; color:#666666;}
+#register .register .QR_code{ margin-top:20px; width:165px; padding:1  0px; height:165px; background:#FFF; border:1px solid #bbb;}
+#register .register .QR_code img{ padding:0px 25px;}
+#register .register .QR_code span{ padding:5px 0; display:block; text-align:center; color:#d32994; font-size:14px; font-weight:bold;}
+/********* UpdatePass css *********/
+#updatePass { width:100%; background:#f2f3f4; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5;}
+#updatePass .register{ width:900px; margin:0 auto; height:450px;}
+#updatePass .register .left{ float:left; width:550px;}
+#updatePass .register .right{ float:right; width:250px;}
+#updatePass .register ul{ padding:20px 0;}
+
+#updatePass .register ul li{ width:700px; overflow:hidden; padding:10px 0;}
+#updatePass .register ul li strong{ color:#F00; padding:0 3px;}
+#updatePass .register ul li input{ width:260px;}
+#updatePass .register ul li span{ display:block;width:100px; float:left; font-size:14px; text-align:right; padding-right:15px;}
+#updatePass .register .r_commInfo{ margin-left:120px; margin-top:20px; width:228px; background:url(../images/r_compInfo.png); height:45px;  border:none;}
+
+#updatePass .register .text { float:left; width:248px; height:30px; padding-left:5px; line-height:30px; border: #bbb 1px solid;}
+#updatePass .register .code{ width:100px;}
+#updatePass .register .r_but{ border:none; width:138px; background:#01b0ee; height:24px; line-height:24px; color:#FFF; margin-left:10px; margin-top:4px;}
+#updatePass .register .r_reg{ margin-left:120px; margin-top:20px; width:168px; height:45px; background:url(../images/r_login.jpg); border:none;}
+#updatePass .register .enjoy h3{ color:#d32994; font-size:14px; height:30px; line-height:30px;}
+#updatePass .register .enjoy p{ line-height:24px; color:#666666;}
+#updatePass .register .QR_code{ margin-top:20px; width:165px; padding:1  0px; height:165px; background:#FFF; border:1px solid #bbb;}
+#updatePass .register .QR_code img{ padding:0px 25px;}
+#updatePass .register .QR_code span{ padding:5px 0; display:block; text-align:center; color:#d32994; font-size:14px; font-weight:bold;}
+
+
+
+.updatepass{ padding-left:300px;}
+.updatepass .step{ margin-top:30px; width:480px; height:35px; background:url(../images/step_one.png) no-repeat;}
+.updatepass .step2{ margin-top:30px; width:480px; height:35px; background:url(../images/step_two.png) no-repeat;}
+.updatepass .next_step{ margin-left:120px; margin-top:10px; width:160px; height:45px; background:url(../images/next_step.png); border:none;}
+.updatepass .confirm{ background:url(../images/confirm.png) no-repeat;}
+.updatepass ul li .plus_c{ float:left; margin:3px 0 0 5px; width:218px; height:45px; line-height:26px; background:url(../images/title06.gif) no-repeat; padding-left:35px; color:#777; font-family:"宋体"; font-style:normal;}
+.updatepass ul li .plus_b{ float:left; margin:3px 0 0 5px; width:218px; height:45px; line-height:26px; background:url(../images/title05.gif) no-repeat; padding-left:35px; color:#777; font-family:"宋体"; font-style:normal;}
+.updatepass ul li .pw_success{ float:left; margin:3px 0 0 5px; width:218px; height:45px; line-height:26px; background:url(../images/m_yes.png) no-repeat; padding-left:35px; color:#777; font-family:"宋体"; font-style:normal;}
+
+

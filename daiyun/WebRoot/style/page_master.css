@@ -1,0 +1,108 @@
+
+/* ----------- global html css ------------- */
+body{ margin:0px; padding:0px; color:#333; font-size:12px; background:#fff; font-family: Verdana, Arial, Helvetica, sans-serif;}
+p,h1,h2,h3,h4,h5,table, tr, td, div,dl,dl dd,ul,ul li {
+	margin:0px;
+	padding:0px;
+	margin-top: 3px;
+}
+ul{list-style:none;}
+img{border: 0px;}
+select,textarea,form,div { margin:0px;padding:0px; font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+input { margin:0px;padding:0px; font-size:12px; font-family:Arial, Helvetica, sans-serif; width:65px;  padding-top: 2px; }
+a{color:#333333;text-decoration:none;}
+/* ----------- html layout css ------------- */
+#admin{ width:1024px; height:auto; overflow:hidden; margin:0 auto;}
+#top { width:100%; margin:0 auto; height:130px;}
+#top span{ display:block; width:1000px; padding-left:24px; height:30px; line-height:30px; color:#FFF; background:url(../m_images/tit_bg.jpg) repeat-x;}
+#top span a{ color:#FFF;}
+.master{ width:100%;}
+.master .left{ float:left; width:170px; height:638px; overflow:hidden; background:url(../m_images/left.jpg) no-repeat; padding:18px;}
+.master .right{ float:right; width:818px; background:#e1ebf2; height:618px; padding-top:20px;}
+/*--------------标题列表---------------*/
+.title_list{ width:170px;}
+.title_list a{ color:#FFF;}
+.title_list a:hover{ color:#FFF;}
+.title_list .tit01{ width:166px; height:30px; background:url(../m_images/tit01.png) no-repeat;}
+.title_list .tit01 a{ display:block;margin: -8px -150px; width:182px; height:30px;}
+.title_list .tit01 span{ float:right; margin-top:9px;margin-left: 11px; width:32px;height:15px; background:url(../m_images/icon12.png) no-repeat }
+.title_list .tit02{ width:166px; height:30px; background:url(../m_images/tit02.png) no-repeat;}
+.title_list .tit02 a{ display:block;  margin: -8px -150px; width:182px; height:30px;}
+.title_list .tit02 span{ float:right; margin-top:9px;margin-left: 11px; width:32px;height:15px; background:url(../m_images/icon12.png) no-repeat }
+
+.title_list ul{ width:126px; padding:5px 0 10px 40px;}
+.title_list ul li{ width:106px; padding-left:20px; height:28px; line-height:28px; background:url(../m_images/icon01.png) left no-repeat;}
+.title_list ul li a{ color:#4b4b4b;}
+.title_list ul li a:hover{ color:#4b4b4b;}
+.manage_form_bk{background:#eef7ff;}
+.manage_form_bk2{background:#FFF;}
+.admin_rit_ads { width:805px; padding-left:13px;}
+
+.admin_ads_head {
+	border-bottom:1px solid #d8d8d8;
+	width:765px;
+	height:48px;
+	font-size:14px;
+	font-weight:bold;
+	color:#555;
+	background:#FFF;
+	padding:0px 10px;
+	border: 1px solid #a1b3be;
+}
+.admin_ads_head_lft { float:left;  height:35px; line-height:35px;}
+.admin_ads_head_rit { float:right; padding-top:7px; height:28px; }
+
+.admin_piece {
+	width:739px;
+	padding:0px 10px;
+	height:36px;
+	margin-top:3px;
+}
+.admin_piece_lft { float:left; line-height:36px;}
+.admin_piece_rit {
+	text-align:left;
+	padding-top:10px;
+	width: 785px;
+	margin-left:10px;
+	padding-bottom: 2px;
+	text-align: left;
+}
+.admin_ads_bd { border-bottom:1px solid #ddd; width:740px; line-height:24px; background:#f1f1f1; padding:10px 10px; margin-top:10px;}
+
+.admin_ads_check {
+	width:785px;
+	padding:2px 0px;
+	margin-top: 20px;
+	border: 1px solid #a1b3be;
+	background:#FFF;
+}
+.admin_ads_check p {
+	width:740px;
+	padding:3px 0px;
+}
+
+.admin_table {
+	width:760px;
+	height:320px;
+	border:1px solid #a1b3be;
+
+}
+
+.admin_table td{
+	width:760px;
+	height:320px;
+	height:30px;
+}
+.admin_query {
+    width:180px;
+}
+.pagelist { width:765px; height:50px; padding-top:10px; border:1px solid #a1b3be; border-top:none; background:#fff; padding-right:20px;}
+.pagelist ul { float:right;}
+.pagelist .firstPage { width:30px;}
+.pagelist ul li {float:left; font-family:Tahoma; line-height:22px; height:22px; margin-left:5px; font-size:12px; border:1px solid #999999; padding:0px 8px; width:auto;}
+.pagelist ul li a{ color:#333;}
+.pagelist ul li a:hover {color:#d32994; text-decoration:none;}
+.pagelist ul li.thisclass, .pagelist ul li.thisclass a, .pagelist ul li.thisclass a:hover {color:#d32994;}
+.pagelist .pageinfo { line-height:21px; padding:12px 5px 10px 5px; color:#999;}
+.pagelist .pageinfo strong { color:#555; font-weight:normal;margin:0px 2px;}
+

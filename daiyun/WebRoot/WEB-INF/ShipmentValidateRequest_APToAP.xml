@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<req:ShipmentValidateRequestAP xmlns:req="http://www.dhl.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dhl.com
+ship-val-req_AP.xsd">
+	<Request>
+		<ServiceHeader>
+			<!--MessageTime>2011-05-28T11:28:56.000-08:00</MessageTime>
+			<MessageReference>1234567890123456789012345678901</MessageReference-->
+			<SiteID>$siteid$</SiteID>
+			<Password>$password$</Password>
+		</ServiceHeader>
+	</Request>
+	<LanguageCode>en</LanguageCode>
+	<PiecesEnabled>Y</PiecesEnabled>
+	<Billing>
+		<ShipperAccountNumber>$masteraccount$</ShipperAccountNumber>
+		<ShippingPaymentType>$paymenttype$</ShippingPaymentType>
+		<BillingAccountNumber>$paymentaccount$</BillingAccountNumber>
+		<DutyPaymentType>$ddpsign$</DutyPaymentType>
+		$dutyaccountnumber$
+	</Billing>
+	<Consignee>
+		<CompanyName>$consigneecompany$</CompanyName>
+		<AddressLine>$consigneeaddress1$</AddressLine>
+		<AddressLine>$consigneeaddress2$</AddressLine>
+		<AddressLine>$consigneeaddress3$</AddressLine>
+		<City>$consigneecity$</City>
+		<!--Division>Maharashtra</Division-->
+		<!--DivisionCode>SE</DivisionCode-->
+		<PostalCode>$consigneepostcode$</PostalCode>
+		<CountryCode>$consigneecountrycode$</CountryCode>
+		<CountryName>$consigneecountryname$</CountryName>
+		<Contact>
+			<PersonName>$consigneename$</PersonName>
+			<PhoneNumber>$consigneetelephone$</PhoneNumber>
+			<!--PhoneExtension>45232</PhoneExtension-->
+			<!--FaxNumber>$consigneefax$</FaxNumber-->
+			<!--Telex>454586</Telex-->
+			<!--Email>
+				<From>test@dhl.com</From>
+				<To>test@dhl.com</To>
+				<cc>testcc1</cc>
+				<cc>testcc2</cc>
+				<Subject>test email</Subject>
+				<ReplyTo>test1@dhl.com</ReplyTo>
+				<Body>this is test shipment</Body>
+			</Email-->
+		</Contact>
+	</Consignee>
+	
+	<!--Commodity>
+		<CommodityCode>1</CommodityCode>
+		<CommodityName>String</CommodityName>
+	</Commodity-->
+
+	<Dutiable>
+		<DeclaredValue>$declaredvalue$</DeclaredValue>
+		<DeclaredCurrency>$declaredcurrency$</DeclaredCurrency>
+		<!--ShipperEIN>$declarecontent$</ShipperEIN-->
+		
+	</Dutiable>
+
+	<Reference>
+		<ReferenceID>$customerEWBCode$</ReferenceID>
+		<ReferenceType>St</ReferenceType>
+	</Reference>
+	<ShipmentDetails>
+		<NumberOfPieces>$transferpieces$</NumberOfPieces>
+		<CurrencyCode>USD</CurrencyCode>
+		<Pieces>
+$Pieces$
+		</Pieces>
+		<PackageType>EE</PackageType>
+		<Weight>$transferchargeweight$</Weight>
+		<DimensionUnit>C</DimensionUnit>
+		<WeightUnit>K</WeightUnit>
+		<!--ProductCode>W</ProductCode-->
+		<GlobalProductCode>$productcode$</GlobalProductCode>
+		<LocalProductCode>$productcode$</LocalProductCode>
+		<DoorTo>DD</DoorTo>
+		<Date>$recorddate$</Date>
+		<Contents>$declarecontent$</Contents>
+
+		<!--DimensionUnit>I</DimensionUnit-->
+		<!--InsuredAmount>3.1</InsuredAmount-->
+		<!--CurrencyCode>USD</CurrencyCode-->
+	</ShipmentDetails>
+	<Shipper>
+		<ShipperID>$shipperID$</ShipperID>
+		<CompanyName>$shippercompany$</CompanyName>
+		<!--RegisteredAccount>550000055</RegisteredAccount-->
+		<AddressLine>$shipperaddress1$</AddressLine>
+		<AddressLine>$shipperaddress2$</AddressLine>
+		<AddressLine>$shipperaddress3$</AddressLine>
+		<City>$shippercityname$</City>
+		<!--Division>California</Division-->
+		<!--DivisionCode>KL</DivisionCode>
+		<PostalCode>57000</PostalCode-->
+		<CountryCode>$shippercountrycode$</CountryCode>
+		<CountryName>$shippercountryname$</CountryName>
+		<Contact>
+			<PersonName>$shippername$</PersonName>
+			<PhoneNumber>$shippertelephone$</PhoneNumber>
+			<!--PhoneExtension>6536</PhoneExtension-->
+			<!--FaxNumber>$shipperfax$</FaxNumber-->
+			<!--Telex>74558</Telex>
+			<Email>
+				<From>djogi@dhl.com</From>
+				<To>djogi@dhl.com</To>
+				<cc>String</cc>
+				<cc>String</cc>
+				<Subject>String</Subject>
+				<ReplyTo>String</ReplyTo>
+				<Body>djogi@dhl.com</Body>
+			</Email-->
+		</Contact>
+	</Shipper>
+
+</req:ShipmentValidateRequestAP>

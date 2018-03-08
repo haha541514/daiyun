@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">  
+<taglib>  
+    <tlib-version>2.2.3</tlib-version>  
+    <jsp-version>1.2</jsp-version>  
+    <short-name>tangs</short-name>  
+    <uri>/tangs</uri>  
+    <display-name>"Tangs Tags"</display-name>  
+    <tag>  
+        <name>tree</name>  
+        <tag-class>com.baiqian.web.util.tag.Tree</tag-class>  
+        <body-content>empty</body-content>  
+        <attribute>  
+            <name>items</name>  
+            <required>true</required>  
+            <rtexprvalue>true</rtexprvalue>  
+        </attribute>  
+    </tag>  
+</taglib>  

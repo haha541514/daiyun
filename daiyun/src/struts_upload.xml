@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- ognl -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<!-- 控制文字编码 -->
+	<constant name="struts.i18n.encoding" value="GB2312" />
+
+	<package name="upload" extends="default">
+	<!-- 跳转上传页面 -->
+  <action name="upload" class="com.daiyun.opweb.action.UploadAction" method="upload">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/op/upload.jsp</result>
+    </action>  
+	<!-- 上传 -->
+    <action name="uploadExcel" class="com.daiyun.opweb.action.UploadAction" method="uploadExcel">
+    	<result name="success">/op/exception.jsp</result>
+    </action>   
+     <!--(新)上传 -->
+    <action name="newUploadExcel" class="com.daiyun.opweb.action.UploadAction" method="newUploadExcel">
+    	<result name="success">/page/exception2.jsp</result>
+    </action>   
+	<!-- 覆盖，扣件，合并 -->
+    <action name="OMH" class="com.daiyun.opweb.action.UploadAction" method="OMH">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/op/exception.jsp</result>
+    </action>  	 
+    <!-- 拆包 -->
+    <action name="parse" class="com.daiyun.opweb.action.UploadAction" method="parse">
+   		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+   		<result name="success" type="redirect">/order/queryTransientOrders?link=transient</result>
+    </action>
+    <!-- 合包 -->
+    <action name="merge" class="com.daiyun.opweb.action.UploadAction" method="merge">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success" type="redirect">/order/queryTransientOrders?link=transient</result>
+    </action>  		
+    <!-- 拆分 -->
+    <action name="remove" class="com.daiyun.opweb.action.UploadAction" method="remove">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/page/zdremove.jsp</result>
+    </action> 
+	<!-- 上传后日志 -->
+	 <action name="LogI" class="com.daiyun.opweb.action.UploadAction" method="showLog">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/page/uploadLog.jsp</result>
+    </action>
+    <!-- 行数据 -->
+	<action name="showRD" class="com.daiyun.opweb.action.UploadAction" method="showRowAndData">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/page/uploadRowData.jsp</result>
+    </action>
+	
+	<!-- 自定义模板上传DY -->
+    <action name="templateExcel" class="com.daiyun.opweb.action.TemplateAction" method="templateExcel">	 
+    	<result name="success">/op/template.jsp</result>
+    </action>  
+    
+   	<!-- 暂存模板数据 -->
+    <action name="saveData" class="com.daiyun.opweb.action.TemplateAction" method="saveData">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/op/template.jsp</result>
+    </action>   
+    <!-- 撤销映射数据 -->
+    <action name="removeData" class="com.daiyun.opweb.action.TemplateAction" method="removeData">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/op/template.jsp</result>
+    </action> 
+    
+    <!-- 保存映射-->
+    <action name="save" class="com.daiyun.opweb.action.TemplateAction" method="save">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success" type="redirect">/page/upload</result>
+    </action>      
+     <!-- 修改映射-->
+    <action name="updateTemplate" class="com.daiyun.opweb.action.TemplateAction" method="updateTemplate">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/op/template.jsp</result>
+    </action>   
+    <!-- 国家列表 -->
+     <action name="listCountry" class="com.daiyun.opweb.action.TemplateAction" method="listCountry">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success">/page/listCountry.jsp</result>
+    </action> 
+    <!-- 映射国家 -->
+     <action name="saveCountry" class="com.daiyun.opweb.action.TemplateAction" method="saveCountry">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success" type="redirect">/page/listCountry</result>
+    </action> 
+    <!-- 修改国家 -->
+    <action name="modifyCountry" class="com.daiyun.opweb.action.TemplateAction" method="modifyCountry">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success" type="redirect">/page/listCountry</result>
+    </action> 
+    <!-- 删除国家 -->
+    <action name="deleteCountry" class="com.daiyun.opweb.action.TemplateAction" method="deleteCountry">
+        <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	<result name="success" type="redirect">/page/listCountry</result>
+    </action>
+	
+	
+	
+	
+
+  </package>
+	
+</struts>

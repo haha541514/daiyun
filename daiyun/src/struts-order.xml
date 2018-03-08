@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 控制文字编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 文件最大上载文件，字节为单位，当前值为5M -->
+	<constant name="struts.multipart.maxSize" value="5242880"/>
+	
+	 <!-- 下载 -->
+    <package name="order" extends="default">
+     
+	<!-- 2016-11-17,Start by wukq -->
+     	
+     	<!-- 订单查询所有
+
+
+	    <action name="queryAllOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryOrdersByParams">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/sf/order/order-query.jsp</result>
+	    </action>-->
+	    <!-- 暂存订单--> 
+	    <action name="queryTransientOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryOrdersByParams">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success">/sf/order/order-query.jsp</result>
+	    </action> 
+	      <!-- 已申报订单 --> 
+	    <action name="queryDeclaredOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryOrdersByParams">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success">/sf/order/order-query.jsp</result>
+	    </action> 
+	       <!-- 已打印订单 --> 
+	    <action name="queryPrintedOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryOrdersByParams">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success">/sf/order/order-query.jsp</result>
+	    </action> 
+	       <!-- 配货订单--> 
+	    <action name="queryAllocateOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryOrdersByParams">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success">/sf/order/order-query.jsp</result>
+	    </action> 
+		<!-- 已收货订单查询 -->
+    	   <action name="queryReceivedOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryOrdersByParams">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success" >/sf/order/order-query.jsp</result>
+	    </action> 
+	  
+	  <!-- 导出已收货订单 -->
+	    <action name="export" class="com.daiyun.sfweb.action.OrderAction" method="export">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>  
+	    	<result name="success" type="redirect">/order/queryAllOrders?link=queryAll</result>
+	    </action>
+	     <!-- 导出已打印订单 -->
+	    <action name="exportprint" class="com.daiyun.sfweb.action.OrderAction" method="exportprint">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryPrintedOrders?link=printed</result>
+	    </action>
+	    
+	    <!-- 申报订单 -->
+	    <action name="declare" class="com.daiyun.sfweb.action.OrderAction" method="declare">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryDeclaredOrders?link=declared</result>
+	    </action>
+	    <!-- 申报并完成 -->
+	    <action name="declareandcomplete" class="com.daiyun.sfweb.action.OrderAction" method="complete">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>  
+	    	<result name="success" type="redirect">/order/queryPrintedOrders?link=printed</result>
+	    </action>
+	    
+	     <!-- 按id查询需修改的订单,修改货物信息 -->
+	    <action name="queryModifyOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryModifyOrders">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success">/sf/order/order-query.jsp</result>
+	    </action>
+	    
+	     <!-- 删除暂存订单 -->
+	   	<action name="deleteTransientOrders" class="com.daiyun.sfweb.action.OrderAction" method="deleteTransientOrders">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryTransientOrders?link=transient</result>
+	    </action>
+	    	
+	    	
+	    <!--撤销已已申报订单变为暂存状态 -->
+	   <action name="newRecoverDeclaredOrders" class="com.daiyun.sfweb.action.OrderAction" method="newRecoverDeclaredOrders">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success" type="redirect">/order/queryDeclaredOrders?link=declared</result>
+	    </action>
+	    
+	     
+	    <!--撤销已打印订单变为暂存状态-->
+	   <action name="newRecoverOrders" class="com.daiyun.sfweb.action.OrderAction" method="newRecoverOrders">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryPrintedOrders?link=printed</result>
+	    </action>
+	        <!-- 订单扣件 -->
+	    <action name="detainOrders" class="com.daiyun.sfweb.action.OrderAction" method="detainOrders">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>  
+	    	<result name="success" type="redirect">/order/queryPrintedOrders?link=printed</result>
+	    </action>
+	       <!-- 配货 -->
+	   <action name="allocate" class="com.daiyun.sfweb.action.OrderAction" method="allocate">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryAllocateOrders?link=allocate</result>
+	    </action>
+	    
+	     <!-- 完成配货 -->
+	    <action name="completeAllocate" class="com.daiyun.sfweb.action.OrderAction" method="completeAllocate">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>  
+	    	<result name="success" type="redirect">/order/queryAllocateOrders?link=allocate</result>
+	    </action>
+	    <!-- 退出登录 -->
+	   	<action name="loginout" class="com.daiyun.sfweb.action.LoginAction" method="loginout">
+	    	<!--  <interceptor-ref name="AuthInterceptor"></interceptor-ref> -->
+	       <result name="success" type="redirect">/login.jsp</result>
+	    </action>
+	     <!-- 从接口导入订单 -->
+	    <action name="ERPImportUI" class="com.daiyun.sfweb.action.ApiDatadoImport" method="aliexpressImportUI">
+	        <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	        <result name="success" >/sf/Interface_order.jsp</result>
+	    </action>
+	    
+	     <!-- 添加店铺UI -->
+	    <action name="addStoreUI" class="com.daiyun.sfweb.action.ApiDatadoImport" method="addStoreUI">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/sf/Add_store.jsp</result>
+	    </action>
+	    
+	    <!-- 添加店铺 -->
+	    <action name="addStore" class="com.daiyun.sfweb.action.ApiDatadoImport" method="addStore">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    </action>
+	    
+	   	<!--店铺导入日志 -->
+	    <action name="aliImportLog" class="com.daiyun.sfweb.action.ApiDatadoImport" method="aliImportLog">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/sf/Check_record.jsp</result>
+	    </action>
+	          <!-- 导入订单详情 -->
+	    <action name="aliImportLogDetail" class="com.daiyun.sfweb.action.ApiDatadoImport" method="aliImportLogDetail">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/sf/Import_OrderDetail.jsp</result>
+	    </action>
+	    
+	    
+	     <!-- 马帮导入订单 -->
+	    <action name="doMabangImport" class="com.daiyun.sfweb.action.ApiDatadoImport" method="doMabangImport">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/sf/Import_OrderInfo.jsp</result>
+	    </action>
+	    <!-- 通途导入订单 -->
+	    <action name="doTongToolImport" class="com.daiyun.sfweb.action.ApiTongTooldoImport" method="doTongToolImport">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	       <result name="success">/sf/Import_OrderInfo.jsp</result>
+	    </action>
+	       <!-- 速卖通导入订单 -->
+	    <action name="doAliexpressImport" class="com.daiyun.sfweb.action.ApiDatadoImport" method="doAliexpressImport">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/sf/Import_OrderInfo.jsp</result>
+	    </action>
+ 	<!-- 易贝添加店铺,授权,getAuthorizationUrl -->
+	        <action name="getAuthorizationUrl" class="com.daiyun.sfweb.action.ApiDatadoImport" method="getAuthorizationUrl">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	        <result name="success" type="redirect">${authUrl }</result>
+	    </action>
+	
+	    <!-- 马帮保存店铺 -->
+	    <action name="getERPStoreName" class="com.daiyun.sfweb.action.ApiDatadoImport" method="getERPStoreName">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	        <result name="success" >/sf/Add_store.jsp</result>
+	    </action>
+	     <!-- HL,ajax添加店铺 -->
+	     <action name="getAuthorizationUrlHL" class="com.daiyun.sfweb.action.ApiDatadoImport" method="getAuthorizationUrlHL">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	        <!--  <result name="success" type="redirect">${authUrl }</result>-->
+	    </action> 
+	    
+	      <!-- 加载店铺 -->
+	    <action name="loadStores" class="com.daiyun.sfweb.action.ApiDatadoImport" method="loadStores">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/sf/order/stores.jsp</result>
+	    </action>
+	    <!-- 2016-11-17,End -->
+	    <!-- 查看订单详情 -->
+	    <action name="queryOrdersDetail" class="com.daiyun.pgweb.action.OrderAction" method="queryOrdersDetail">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success" >/pg/member/newOrder.jsp</result>
+	    </action>  
+ 
+	     <!-- 网上下单保存 -->
+	    <action name="saveOrder" class="com.daiyun.pgweb.action.OrderAction" method="saveOrder">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success" type="redirect">/order/queryTransientOrders?link=transient</result>
+	    </action>
+	   
+	    <!-- 网上下单订单号校验 -->
+	    <action name="orderIdAJAX" class="com.daiyun.pgweb.action.OrderAction" method="orderIdAJAX">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/page/order.jsp</result>
+	    </action>
+	      
+	    <!--下单界面查询发件人 -->	    
+	    <action name="getShipperInfo" class="com.daiyun.pgweb.action.OrderAction" method="getShipperInfo">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    </action>  	
+	    
+	    <!-- 下单界面查询收件人 -->	    
+	    <action name="getConsigneeInfo" class="com.daiyun.pgweb.action.OrderAction" method="getConsigneeInfo">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    </action>  
+ 	    <!-- 单独报关 -->
+	     <action name="addAlonecustoms" class="com.daiyun.sfweb.action.OrderAction" method="addAlonecustoms">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryTransientOrders?link=transient</result>
+	    </action>
+	       
+	    <!-- 订单回收站queryRecycleOrders -->
+	     <action name="queryRecycleOrders" class="com.daiyun.sfweb.action.OrderAction" method="queryOrdersByParams">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" >/sf/order/order-recycle.jsp</result>
+	    </action>
+	     <!-- 回收站订单彻底删除 -->
+    	<action name="deleteRecycleOrders" class="com.daiyun.sfweb.action.OrderAction" method="deleteRecycleOrders">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryRecycleOrders?link=recycle</result>
+	    </action>
+	    
+     	<!-- 回收站订单恢复 -->
+    	<action name="recoverRecycleOrders" class="com.daiyun.sfweb.action.OrderAction" method="recoverRecycleOrders">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryRecycleOrders?link=recycle</result>
+	    </action>
+	    <!-- 按条件批量删除回收站订单 -->
+	   <action name="deleteBatchRecycle" class="com.daiyun.sfweb.action.OrderAction" method="deleteBatchRecycle">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryRecycleOrders?link=recycle</result>
+	    </action>
+	    <!-- 提货单查询 -->
+	    <action name="BillLoading" class="com.daiyun.sfweb.action.BillLoadingAction" method="BillLoading">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" >/sf/BillOFLoading_query.jsp</result>
+	    </action>
+	    
+	    
+	    <!-- 提货单管理 -->
+	     <action name="BillLoadingManager" class="com.daiyun.sfweb.action.BillLoadingAction" method="BillLoadingManager">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" >/sf/BillOFLoading_query.jsp</result>
+	    </action>
+	    
+	    <!-- 提货单新建 -->
+	     <action name="CreateBill" class="com.daiyun.sfweb.action.BillLoadingAction" method="CreateBill">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/BillLoading</result>
+	    </action>
+	    <!-- 提货单保存 -->
+	      <action name="SaveBill" class="com.daiyun.sfweb.action.BillLoadingAction" method="SaveBill">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    </action>
+	    <!-- 提货单作废 -->
+	    <action name="InvalidBill" class="com.daiyun.sfweb.action.BillLoadingAction" method="InvalidBill">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    </action>
+	    <!-- 快速下单 -->
+	     <action name="qucklyOrder" class="com.daiyun.sfweb.action.OrderAction" method="qucklyOrder">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" >/pg/member/newOrder.jsp</result>
+	    </action>
+	    <!-- 产品详情 -->
+	    <action name="productDetail" class="com.daiyun.sfweb.action.BillLoadingAction" method="productDetail">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" >/item/</result>
+	    </action>
+	      <!-- 打印提货单 -->
+	    <action name="BillLodingPrint" class="com.daiyun.sfweb.action.PrinterAction" method="BillLodingPrint">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" >/page/printBillLoading.jsp</result>
+	    </action>
+		<!-- 提货单地址改变 -->
+	     <action name="tihuochange" class="com.daiyun.sfweb.action.BillLoadingAction" method="tihuochange">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    </action>
+	    
+	    
+	    
+	    
+    </package>
+</struts>

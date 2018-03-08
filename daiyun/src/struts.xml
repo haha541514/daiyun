@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 控制文字编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 文件最大上载文件，字节为单位，当前值为5M -->
+	<constant name="struts.multipart.maxSize" value="5242880"/>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<include file="struts-order.xml" />
+	<include file="struts_upload.xml" />
+	<include file="struts-other.xml" />
+
+	 <!-- 下载 -->
+    <package name="util" extends="struts-default" namespace="/util">
+    	<!-- result-type匹配Action，result返回的type类型，访问的是ImageAction -->
+     	<result-types>
+		    <result-type name="ValidateImage" class="com.daiyun.util.ImageResult" />
+		</result-types>
+ 		<!-- 全局错误跳转-->
+		<global-results>
+			<result name="error" type="redirect">/page/error.jsp</result>
+		</global-results>
+		
+		
+		<action name="ValidateImage" class="com.daiyun.util.ImageAction" method="doDefault">
+		    <result name="image" type="ValidateImage"/>
+		</action>
+		
+		<!-- 手机短信验证码发送 -->
+		<action name="sendMobileValidateCode" class="com.daiyun.util.ImageAction" method="sendMobileValidateCode">	    
+		</action>
+		<!-- 手机验证码验证 -->
+		<action name="checkMobileValiteCode" class="com.daiyun.pgweb.action.BaseDataAccessAction" method="checkMobileValiteCode"></action>	
+		<!-- 手机验证码验证2 -->
+		<action name="checkMobileValiteCodeEx" class="com.daiyun.sfweb.action.LoginAction" method="checkMobileValiteCodeEx"></action>	
+         
+		<action name="sendMobileValidateCodebyName" class="com.daiyun.sfweb.action.LoginAction" method="sendMobileValidateCodebyName"></action>	
+         
+      
+    </package>
+	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="loginauth"
+				class="kyle.baiqian.fs.web.interceptor.AuthorizationInterceptor">
+			</interceptor>
+			<!--拦截未登录用户-->
+			<interceptor-stack name="AuthInterceptor">
+				<interceptor-ref name="loginauth"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>			
+		<!-- 全局错误跳转 -->
+		<global-results>
+			<result name="error" type="redirect">/page/error.jsp</result>
+			<result name="login" type="redirect">/login.jsp</result>
+		</global-results>
+   
+	     <!-- 根据主键查用户 -->
+    	<action name="queryByOpId" class="com.daiyun.pgweb.action.UserAction" method="queryByOpId">
+    		<result name="success">/pg/member/infoManage.jsp</result>
+    	</action>  
+	    
+	     <!-- 保存用户信息 -->
+    	<action name="saveUserInfo" class="com.daiyun.pgweb.action.UserAction" method="save">
+    		<result name="success">/pg/member/infoManage.jsp</result>
+    	</action>      
+	       
+	    <!-- 用户登录 -->
+	   	<action name="login" class="com.daiyun.pgweb.action.UserAction" method="login">
+	   		<result name="success">/page/userInfo.jsp</result>
+	   	</action>
+    	 	<!--            hzl            -->
+		<!-- 轨迹查询 d1y  -->
+	    <action name="queryTrack" class="com.daiyun.opweb.action.WaybillTrackAction" method="queryTrack">
+	    	<result name="success">/pg/page/queryTrack.jsp</result>
+	    </action>
+	    <!-- 后台轨迹查询   HZL DY -->
+	    <action name="DyqueryTrack" class="com.daiyun.pgweb.action.WaybillTrackAction" method="queryTrack">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/op/dyqueryTrack.jsp</result>
+	    </action>
+
+    	<!-- 查询问题件 -->
+    	<action name="queryIssue" class="com.daiyun.opweb.action.IssueAction" method="queryIssueByParams">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="dispatcher">/op/problem.jsp</result>
+    	</action>
+    	<!-- 查看问题件详情 -->
+	    <action name="queryOrders" class="com.daiyun.pgweb.action.OrderAction" method="queryOrdersDetail">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success" >/op/problemOrder.jsp</result>
+	    </action>  
+     
+    	<!-- 新增问题处理 DY-->
+    	<action name="customerReplay" class="com.daiyun.opweb.action.IssueAction" method="customerReplay">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="redirect">/op/queryIssueAllReplay</result>
+    	</action>
+    	<!-- 判断附件是否存在 DY-->
+	    <action name="FileIsEx" class="com.daiyun.opweb.action.IssueAction" method="FileIsEx">    
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    </action>
+	    <!--下载附件 DY-->
+    	<action name="downloadFile" class="com.daiyun.opweb.action.IssueAction" method="downloadFile">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+    	<!-- 查看问题件回复   DY-->
+    	<action name="queryIssueAllReplay" class="com.daiyun.opweb.action.IssueAction" method="queryIssueAllReplay">
+       		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+       		<result name="success" type="dispatcher">/op/IssueReply.jsp</result>
+    	</action>
+		<!--            hzl            -->
+    	
+    	<!-- ajax保存发件人信息 -->   	
+    	<action name="ajaxAddShipperInfo" class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="ajaxSaveShipperInfo">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+        
+        <!-- ajax保存收件人信息 -->   
+       	<action name="ajaxConsigneeInfo"  class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="ajaxConsigneeInfo">
+       	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+  
+    	<!-- 查询发件人信息 -->
+    	<action name="queryShipperInfo" class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="queryShipperInfo">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success">/pg/member/addressManage.jsp</result>
+    	</action>     		
+    	<action name="loadShipperInfo" class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="loadShipperInfo">
+    		<result name="success" type="chain">queryShipperInfo</result>
+    	</action> 	   
+    	<!-- 保存发件人信息 -->
+    	<action name="saveShipperInfo" class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="saveShipperInfo">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="chain">queryShipperInfo</result>
+    	</action>    	
+    	<!--删除发件人信息 -->
+     	<action name="deleteShipperInfo" class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="deleteShipperInfo">
+     	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="chain">queryShipperInfo</result>
+    	</action>
+    	
+    	<!-- 后台用户注册 -->
+    	<action name="saveUser" class="com.daiyun.pgweb.action.CustomerAction" method="saveUser">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="chain">queryUsersByCocode</result>
+    	</action> 		 
+    	 		 
+    	<!-- 查询公司信息 -->
+    	<action name="queryCompanyByOpId" class="com.daiyun.pgweb.action.CustomerAction" method="queryCompanyByOpId">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success">/pg/member/addcompany.jsp</result>
+    	</action> 	
+    	
+    	<!-- 保存公司信息-->	 
+    	<action name="saveCompany" class="com.daiyun.pgweb.action.CustomerAction" method="saveCompany">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="chain">queryCompanyByOpId</result>
+    	</action> 
+    	
+    	<!-- 查询员工列表 -->
+    	<action name="queryUsersByCocode" class="com.daiyun.pgweb.action.UserAction" method="queryUsersByCocode">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success">pg/member/CustomerList.jsp</result>
+    	</action> 
+    	<!-- 查询员工信息 -->
+    	<action name="modifyCustomer" class="com.daiyun.pgweb.action.UserAction" method="queryByOpId">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success">pg/member/addCustomer.jsp</result>
+    	</action> 
+    	<!-- 修改员工状态 -->
+    	<action name="modifyCustomerStatues" class="com.daiyun.pgweb.action.UserAction" method="modifyCustomerStatues">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="chain">queryUsersByCocode</result>
+    	</action> 
+    	
+    	<!--判断公司是否已经存在 -->	
+    	<action name="existCompany" class="com.daiyun.pgweb.action.CustomerAction" method="saveCompany">
+    		<result name="success" type="chain">queryCompanyByOpId</result>
+    	</action>
+    	
+    	<!-- 修改密码 -->
+    	<action name="modifyPassword" class="com.daiyun.pgweb.action.CustomerAction" method="modifyPassword">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="redirect">queryByOpId</result>
+    	</action>	   
+    	 		   
+    	<action name="getCountryCodeByHubCode" class="com.daiyun.pgweb.action.BaseDataAccessAction" method="getCountryCodeByHubCode"></action>
+    	<action name="getHubCodeByCountryName" class="com.daiyun.pgweb.action.BaseDataAccessAction" method="getHubCodeByCountryName"></action>
+    	<!-- 验证码ajax判断 d1y -->
+    	<action name="ajaxCheckValiteCode" class="com.daiyun.pgweb.action.BaseDataAccessAction" method="ajaxCheckValiteCode"></action>	
+    	
+    	<!-- 首页重要通知 -->
+    	<action name="queryImportantBulletin" class="com.daiyun.pgweb.action.BulletinAction" method="queryImportantBulletin"></action>
+    	
+    	<!-- 首页公司新闻 -->
+    	<action name="queryNews" class="com.daiyun.pgweb.action.BulletinAction" method="queryNews"></action>
+	    
+	 <!-- 根据公告编号查询 -->
+	    <action name="queryByBlId" class="com.daiyun.pgweb.action.BulletinAction" method="queryByBlId">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/news/news.jsp</result>
+	    </action>
+	    <!-- 根据类型查询公告 -->
+	    <action name="queryByBkCode2" class="com.daiyun.pgweb.action.BulletinAction" method="queryByBkCode">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	<result name="success">/Inpage/news.jsp</result>
+	    </action>
+	    <!--首页费用试算 -->
+    	<action name="indexCostBudget" class="com.daiyun.pgweb.action.FeeAction" method="indexCostBudget">	
+    	<result name="success">/pg/frontPages/queryTool.jsp</result>
+    	</action>
+		<!-- 后台费用试算  HZL-->
+    	<action name="costBudget" class="com.daiyun.opweb.action.FeeAction" method="costBudget">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success">/op/costBudget.jsp</result>
+    	</action>
+	    
+	    <!-- 初始化产品下拉列表 -->
+        <action name="getAllProductkind" class="com.daiyun.pgweb.action.DoProductKindAction" method="getAllProductkind" />
+        
+        <!-- 初始化国家下拉列表 -->
+        <action name="getAllCountry" class="com.daiyun.pgweb.action.DoCountryAction" method="getAllCountry" />
+        
+        <!-- 初始化货物类型下拉列表 -->
+        <action name="getAllCargoTypes" class="com.daiyun.pgweb.action.DoCargoTypeAction" method="getAllCargoTypes" />
+        
+         <!-- 初始化付费模式下拉列表 -->
+        <action name="getAllPaymentmodes" class="com.daiyun.pgweb.action.DoPaymentmodeAction" method="getAllPaymentmodes" />
+	    	
+    	<!--<action name="costBudget" class="com.daiyun.pgweb.action.FeeAction" method="costBudget">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success">/op/costBudget.jsp</result>
+    	</action>
+    	-->
+    	<action name="queryByUrIskCode" class="com.daiyun.pgweb.action.AccessControl" method="queryByUrIskCode"></action>
+    	<action name="queryByStructurecode" class="com.daiyun.pgweb.action.AccessControl" method="queryByStructurecode"></action>	    	
+    	<!-- 2016-11-15,Start by wukq -->
+
+	<!-- 注册 -->
+    	<action name="userRegister" class="com.daiyun.sfweb.action.LoginAction" method="register">
+    		<result name="success">/register.jsp</result>
+    	</action>
+    	
+    	<!-- 登录 -->
+    	<action name="userlogin" class="com.daiyun.sfweb.action.LoginAction" method="userLogin" >
+    	</action>
+    	<!-- 首页登录 -->
+    	<action name="indexlogin" class="com.daiyun.sfweb.action.LoginAction" method="indexlogin">
+	    </action>
+	    
+    	<!-- userinfo,个人中心 -->
+    	<action name="userinfo" class="com.daiyun.sfweb.action.LoginAction" method="userInfo" >
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    		<result name="success">/page/personal_center.jsp</result>
+    	</action>
+    	<!-- 注册跳转 -->
+    	<action name="queryUser" class="com.daiyun.sfweb.action.LoginAction" method="queryUser">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    		<result name="success" type="redirect">/queryCompanyByOpId</result>
+	    </action>
+	    <!-- 修改密码 -->
+	    <action name="updatePass" class="com.daiyun.sfweb.action.LoginAction" method="updatePass">
+    		<result name="success">/sf/UpdatePass.jsp</result>
+	    </action>
+    	
+    	 <!-- 判断用户名是否重复 -->
+	    <action name="checkUsername" class="com.daiyun.sfweb.action.LoginAction" method="checkUsername">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    </action>
+    	<!-- 判断手机号是否重复 -->
+	    <action name="checkPhone" class="com.daiyun.sfweb.action.LoginAction" method="checkPhone">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    </action>
+    	
+    	<!-- 打印预览 -->
+	    <action name="queryPrinter" class="com.daiyun.sfweb.action.PrinterAction" method="queryPrinter">
+	    	<result name="success">/page/printLabelOrder.jsp</result>
+	    	<result name="dgm">/page/dgm.jsp</result>
+	    </action>
+    	
+    	<!-- 打印预览 dhlcn-->
+	    <action name="queryPrinterBill" class="com.daiyun.sfweb.action.PrinterAction" method="reportPrint">
+	    	<result name="success">/page/printBill.jsp</result>
+	    </action>
+		
+  	
+    	
+    	<!-- 账单余额查询 -->
+    	<action name="queryBalance" class="com.daiyun.sfweb.action.FinanceAction" method="queryFinanceReport">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    		<result name="success">/sf/Account_balance.jsp</result>
+    	</action>
+    	
+    	<!-- 帐单查询 -->
+    	<action name="queryBillRecord" class="com.daiyun.sfweb.action.FinanceAction" method="queryBillRecord">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    		<result name="success">/sf/Bill_query.jsp</result>
+    	</action>
+    	
+    	<!-- 帐单明细 -->
+    	<action name="queryBillRecordForDetial" class="com.daiyun.sfweb.action.FinanceAction" method="queryBillRecordForDetial">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    		<result name="success">/sf/Bill_detail.jsp</result>
+    	</action>
+    	
+    
+    	<!-- 帐单下载(pdf) -->
+    	<action name="downloadBillRecord" class="com.daiyun.sfweb.action.FinanceAction" method="downloadBillRecord">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    		<result name="success" type="redirect">/${fileName}</result>
+    	</action>
+    	
+    	<!-- 帐单下载(excel) -->
+    	<action name="downloadBillRecordForExcel" class="com.daiyun.sfweb.action.FinanceAction" method="downloadBillRecordForExcel">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	</action>
+    	
+    	
+    	 	<!-- 未出账明细查询 -->
+    	<action name="queryNotAccountDetail" class="com.daiyun.sfweb.action.FinanceAction" method="queryNotAccountDetailReport">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    		<result name="success">/sf/Bill_query.jsp</result>
+    		<result name="error">/page/error.jsp</result>
+    	</action>
+    	
+    	<!-- 导出未出账明细Excel -->
+    	<action name="importExcel" class="com.daiyun.sfweb.action.FinanceAction" method="importExcel">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+    	</action>
+    	
+    	<!-- 2016-11-15,End -->
+    	<!-- 新增问题处理上传文件 DY-->
+    	<action name="customerReplay" class="com.daiyun.opweb.action.IssueAction" method="customerReplay">
+    		<result name="success" type="redirect" >/queryIssueAllReplay</result>
+    	</action>
+    	   	<!-- 支付宝 -->
+		<action name="AlipayAction" class="com.daiyun.opweb.action.AlipayAction" method="alipay">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref>   		 
+    	</action>
+		<action name="AlipayModify" class="com.daiyun.opweb.action.AlipayAction" method="modify">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+     
+    		 <!-- 微信支付 -->
+    	<action name="WeChatAction" class="com.daiyun.opweb.action.WeChatAction" method="wechat">
+    		<interceptor-ref name="AuthInterceptor"></interceptor-ref>		 
+    	</action>
+	    
+	    <!-- 保存发件人信息 -->   	
+    	<action name="ajaxAddShipperInfo" class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="ajaxSaveShipperInfo">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+    	
+    	<!-- 保存发件人信息 -->   	
+    	<action name="ajaxConsigneeInfo" class="com.daiyun.pgweb.action.ShipperConsigneeinfAction" method="ajaxConsigneeInfo">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+    	
+    	<!-- 身份证图片上传 -->
+    	<action name="uploadIdMemberPic" class="com.daiyun.pgweb.action.UserAction" method="uploadIdMemberPic">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+    	
+    	<!-- 手机号码修改 -->
+    	<action name="modifyTelphone" class="com.daiyun.pgweb.action.CustomerAction" method="modifyTelPhone">
+    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	<result name="success" type="redirect">queryByOpId</result>
+    	</action>
+    	
+    	<!-- 邮箱验证 -->
+    	<action name="sendmodifyEmail" class="com.daiyun.pgweb.action.CustomerAction" method="sendmodifyEmail">
+    	
+    	</action>
+    	<!-- 邮箱验证 -->
+    	<action name="modifyEmail" class="com.daiyun.pgweb.action.CustomerAction" method="modifyEmail">
+    	<result name="success" >pg/member/result.jsp</result>
+    	</action>
+    	
+    	<!-- ajax运费计算 (下单界面)-->
+    	<action name="costBudgetAjax" class="com.daiyun.pgweb.action.OrderAction" method="costBudgetAjax">
+    	</action>
+    	
+    	  <!-- 打印 -->
+	    <action name="printAll" class="com.daiyun.sfweb.action.PrinterAction" method="printAll">
+	    	<result name="success" type="redirect">/order/queryPrintedOrders?link=printed</result>
+	    </action>
+	    
+	    <!-- 添加用户角色 -->
+	    <action name="queryRoleByCode" class="com.daiyun.pgweb.action.RoleUserAaction" method="queryRoleByCode">
+	    <result name="success">/pg/member/addUserRole.jsp</result>
+	    </action>
+	    <!-- 查询公司角色 -->
+	    <action name="queryRoleByOpCode" class="com.daiyun.pgweb.action.RoleUserAaction" method="queryRoleByOpCode">
+	    <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    <result name="success">/pg/member/listRole.jsp</result>
+	    </action>
+	   <!-- 保存角色 -->
+	    <action name="saveUserRole" class="com.daiyun.pgweb.action.RoleUserAaction" method="saveUserRole">
+	    </action>    
+    	<!-- 导出问题件回复 -->
+		<action name="exportIssue" class="com.daiyun.opweb.action.IssueAction" method="exportIssue">
+    	</action>
+    	<!-- 上传营业执照 -->
+    	<action name="BusinessLicenseValidate" class="com.daiyun.pgweb.action.UserAction" method="BusinessLicenseValidate">
+    	</action>
+    	
+    	 <!-- 查询一级菜单 -->
+        <action name="queryFirstMenu" class="com.daiyun.pgweb.action.RoleMenuAction" method="queryFirstMenu">
+	    </action>  
+	    
+	     <!-- 查询二级菜单 -->
+        <action name="querySecMenu" class="com.daiyun.pgweb.action.RoleMenuAction" method="querySecMenu">
+	    </action> 
+	    
+	     <!-- 保存角色 -->
+        <action name="saveRoleMenu" class="com.daiyun.pgweb.action.RoleMenuAction" method="saveRoleMenu">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    </action>
+	      <!-- 查询角色以及功能 -->
+        <action name="queryRoleMenuByRlcode" class="com.daiyun.pgweb.action.RoleMenuAction" method="queryRoleMenuByRlcode">
+         <result name="success">/pg/UserRole/roleUser.jsp</result>
+	    </action>     
+	    
+	    <!-- 生成角色树 -->
+        <action name="buildTree" class="com.daiyun.pgweb.action.RoleMenuAction" method="buildTree">
+	    </action>
+	    
+	    <!-- 生成功能树 -->
+        <action name="buildGNTree" class="com.daiyun.pgweb.action.RoleMenuAction" method="buildGNTree">      
+	    </action>    
+	    <!-- 查询角色信息 -->  
+	    <action name="queryRoleAjax" class="com.daiyun.pgweb.action.RoleMenuAction" method="queryRoleAjax">    
+	    </action>  
+	    <!-- 查询菜单信息 -->
+	     <action name="queryMenuAjax" class="com.daiyun.pgweb.action.RoleMenuAction" method="queryMenuAjax">	   
+	    </action>    
+	    <!-- 生成角色排序号 -->
+	         <action name="buildStrucode" class="com.daiyun.pgweb.action.RoleMenuAction" method="buildStrucode">        
+	    </action>
+	     <!-- 生成角色排序号 -->
+	         <action name="buildStrucode" class="com.daiyun.pgweb.action.RoleMenuAction" method="buildStrucode">        
+	    </action>
+	    
+	     <!-- 生成新功能排序号 -->
+	         <action name="buildGmstrucode" class="com.daiyun.pgweb.action.RoleMenuAction" method="buildGmstrucode">        
+	    </action>
+	     <!-- 查询功能信息 -->  
+	    <action name="queryGmenuByCode" class="com.daiyun.pgweb.action.RoleMenuAction" method="queryGmenuByCode">    
+	    </action>  
+	     <!-- 保存新功能菜单 -->
+	         <action name="saveNewMenu" class="com.daiyun.pgweb.action.RoleMenuAction" method="saveNewMenu">        
+	    </action>
+	  <!-- 删除功能菜单 -->
+	         <action name="deleteGuimenu" class="com.daiyun.pgweb.action.RoleMenuAction" method="deleteGuimenu">        
+	    </action>
+	     <!-- 删除角色 -->
+	         <action name="DeleteRole" class="com.daiyun.pgweb.action.RoleMenuAction" method="DeleteRole">        
+	    </action>
+	    <!-- 退款申请 -->
+    	<action name="refundApply" class="com.daiyun.opweb.action.RefundAction" method="refund">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success">/op/refundReply.jsp</result>
+    	</action>
+    	<!-- 退款详情 -->
+    	<action name="refundQuery" class="com.daiyun.opweb.action.RefundAction" method="refundQuery">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success">/op/refundReply.jsp</result>
+    	</action>
+    	<!-- 退款修改查询 -->
+    	<action name="refundModifyQuery" class="com.daiyun.opweb.action.RefundAction" method="refundModifyQuery">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success">/op/modifyRefund.jsp</result>
+    	</action>
+	   	<!-- 发票申请 -->
+    	<action name="applyreceiptrecord" class="com.daiyun.opweb.action.ApplyreceiptrecordAction" method="applyreceiptrecord">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success">/op/applyreceiptrecordReply.jsp</result>
+    	</action>
+    	<!-- 发票申请详情 -->
+    	<action name="applyreceiptrecordQuery" class="com.daiyun.opweb.action.ApplyreceiptrecordAction" method="applyreceiptrecordQuery">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success">/op/applyreceiptrecordReply.jsp</result>
+    	</action>
+    	<!-- 发票修改查询 -->
+    	<action name="applyModifyQuery" class="com.daiyun.opweb.action.ApplyreceiptrecordAction" method="applyModifyQuery">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success">/op/modifyApplyreceiptrecord.jsp</result>
+    	</action>
+    	 
+    	<!-- 邮寄人资料 -->
+    	<action name="mailQuery" class="com.daiyun.opweb.action.ApplyreceiptrecordAction" method="mailQuery">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+    	
+    	
+    	
+    	<!-- 费用查询 -->
+    	<action name="CostOFQuery" class="com.daiyun.sfweb.action.CostAction" method="CostOFQuery">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+		    <result name="success">/sf/Cost_of_query.jsp</result>
+	    </action>
+    	<!-- 费用管理 -->
+    	<action name="CostOFManager" class="com.daiyun.sfweb.action.CostAction" method="CostOFManager">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+		   	 <result name="success">/sf/Cost_of_query.jsp</result>
+    	</action>
+    	<!-- 费用查询导出 -->
+    	<action name="exportCostExcel" class="com.daiyun.sfweb.action.CostAction" method="exportCostExcel">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+    	
+    	<!-- 消息设置MessageSetting -->
+    	 <action name="MessageSetting" class="com.daiyun.pgweb.action.UserAction" method="MessageSetting">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success">pg/member/CustomerList.jsp</result>
+    	</action>
+    	<!-- 消息增加  -->
+    	 <action name="AddMessageSetting" class="com.daiyun.pgweb.action.UserAction" method="AddMessageSetting">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 <result name="success" type="redirectAction">
+	    	 	<param name="actionName">MessageSetting</param>
+	    	 	<param name="opid">${opid}</param>
+	    	 	<param name="opname">${opname}</param>
+	    	 </result>
+    	</action>
+    	<!-- 删除消息规则 -->
+    	 <action name="DeleteMessageSetting" class="com.daiyun.pgweb.action.UserAction" method="DeleteMessageSetting">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 	<result name="success" type="redirectAction">
+	    	 	<param name="actionName">MessageSetting</param>
+	    	 	<param name="opid">${opid}</param>
+	    	 	<param name="opname">${opname}</param>
+	    	 	</result>
+    	</action>
+    	<!-- 价格查询管理 -->
+    	 <action name="Price_Query" class="com.daiyun.sfweb.action.PriceAction" method="Price_Query">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 	<result name="success" >/sf/Price_query.jsp</result>
+    	</action>
+    	
+    	<action name="Price_Manage" class="com.daiyun.sfweb.action.PriceAction" method="Price_Manage">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	    	 	<result name="success" >/sf/Price_query.jsp</result>
+    	</action>
+  
+    	 <action name="exportPrice" class="com.daiyun.sfweb.action.PriceAction" method="exportPrice">
+	    	 <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+    	</action>
+    	
+	   </package>
+  
+</struts>

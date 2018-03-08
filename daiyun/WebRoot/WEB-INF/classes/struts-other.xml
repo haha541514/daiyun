@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 控制文字编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- ognl -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+
+	<package name="page" extends="struts-default">	
+	<interceptors>
+			<interceptor name="loginauth"
+				class="kyle.baiqian.fs.web.interceptor.AuthorizationInterceptor">
+			</interceptor>
+			<!--拦截未登录用户-->
+			<interceptor-stack name="AuthInterceptor">
+				<interceptor-ref name="loginauth"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>	
+		<!-- 全局错误跳转 -->
+		<global-results>
+			<result name="error" type="redirect">/page/error.jsp</result>
+			<result name="login" type="redirect">/pg/bulletin/login.jsp</result>
+		</global-results>
+		<!-- 查询一级菜单  -->	   	
+	   <action name="queryFirstItem" class="com.daiyun.pgweb.action.GmItemAction" method="queryFirstItem">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success">/pg/customBlock/customizeblock.jsp</result>
+	   </action>
+	   <!-- 查询子菜单 -->
+	   <action name="querySubmenu" class="com.daiyun.pgweb.action.GmItemAction" method="querySubmenu">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success">/pg/customBlock/customItem.jsp</result>
+	   </action>	
+	   <!-- 根据菜单编号查询菜单  -->
+	   <action name="queryByGmCode" class="com.daiyun.pgweb.action.GmItemAction" method="queryByGmCode">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success">/pg/customBlock/customizeblock.jsp</result>
+	   </action>
+	   <!-- 根据菜单编号查询菜单包含内容 -->
+	   <action name="querySubByGmCode" class="com.daiyun.pgweb.action.GmItemAction" method="querySubByGmCode">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success">/pg/customBlock/customItem.jsp</result>
+	   </action>
+	   <!-- 查询新闻详细-->
+	   <action name="qyByBlId" class="com.daiyun.pgweb.action.ToIndexBlAction" method="queryByBlId">
+	   		<result name="success">/news/newcount.jsp</result>
+	   </action>
+	    <!-- 新增修改菜单 -->
+	   <action name="AddAndUpdateGm" class="com.daiyun.pgweb.action.GmItemAction" method="AddAndUpdateGmItem">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success" type="redirect">/page/queryFirstItem</result>
+	   </action>
+	   <!-- 删除菜单 -->
+	   <action name="DeleteGm" class="com.daiyun.pgweb.action.GmItemAction" method="DeleteGmItem">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success" type="redirect">/page/queryFirstItem</result>
+	   </action>
+	    <!-- 新增修改子菜单 -->
+	   <action name="AddAndUpdateGmItem" class="com.daiyun.pgweb.action.GmItemAction" method="AddAndUpdateGmItem">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success" type="redirect">/page/querySubmenu</result>
+	   </action>
+	   <!-- 删除子菜单 -->
+	   <action name="DeleteGmItem" class="com.daiyun.pgweb.action.GmItemAction" method="DeleteGmItem">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+	   		<result name="success" type="redirect">/page/querySubmenu</result>
+	   </action>
+	   
+	   <action name="queryBulletin" class="com.daiyun.pgweb.action.ToIndexBlAction" method="queryBulletin">
+	   <interceptor-ref name="AuthInterceptor"></interceptor-ref>
+			<result name="success">/pg/bulletin/listBulletin.jsp</result>
+		</action> 
+		
+		<!-- 微信公告管理 -->
+		<action name="weChatBulletin" class="com.daiyun.pgweb.action.ToIndexBlAction" method="weChatBulletin">
+			<result name="success">/pg/bulletin/weChatBulletin.jsp</result>
+		</action>
+		<!-- 添加微信公告 -->
+		<action name="toAddWechat" class="com.daiyun.pgweb.action.ToIndexBlAction" method="toAddWechat">
+			<result name="success">/pg/bulletin/addWechat.jsp</result>
+		</action>
+		<!-- 保存微信公告 -->
+		<action name="saveWechat" class="com.daiyun.pgweb.action.ToIndexBlAction" method="saveWechat">
+			<result name="success" type="redirect">/page/editWechat?blId=${blId}</result>
+		</action>
+		<!-- 编辑微信 -->
+		<action name="editWechat" class="com.daiyun.pgweb.action.ToIndexBlAction" method="editWechat">
+			<result name="success">/pg/bulletin/editWeChatBulletin.jsp</result>
+		</action>
+		<!-- 删除微信 -->
+		<action name="delWechat" class="com.daiyun.pgweb.action.ToIndexBlAction" method="deleteBulletin">
+			<result name="success" type="redirect">/page/weChatBulletin</result>
+			<result name="error" type="redirect">/page/error.jsp</result>
+		</action>
+		<!-- 保存微信项目 -->
+		<action name="saveWechatItem" class="com.daiyun.pgweb.action.ToIndexBlAction" method="saveWechatItem">
+			<result name="success" type="redirect">/page/editWechat?blId=${blId}</result>
+		</action>
+		<!--上传图片-->
+		<action name="uploadImage" class="com.daiyun.pgweb.action.ToIndexBlAction" method="uploadImage" />
+		<!-- 删除微信项目 -->
+		<action name="deleteWechatItem" class="com.daiyun.pgweb.action.ToIndexBlAction" method="deleteWechatItem">
+			<result name="success" type="redirect">/page/editWechat?blId=${blId}</result>
+		</action>
+		<!-- 选择新闻 -->
+		<action name="selectBulletinAjax" class="com.daiyun.pgweb.action.ToIndexBlAction" method="queryBulletin">
+		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+			<result name="success">/pg/bulletin/selectBulletinAjax.jsp</result>
+		</action>
+		
+		<action name="getBulletinById" class="com.daiyun.pgweb.action.ToIndexBlAction" method="getBulletinById">
+		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+			<result name="success">/pg/bulletin/modifyBulletin.jsp</result>
+		</action> 
+		
+		<action name="saveBulletin" class="com.daiyun.pgweb.action.ToIndexBlAction" method="saveBulletin">
+		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+			<result name="success" type="redirect">/page/queryBulletin</result>
+		</action> 
+		<action name="deleteBulletin" class="com.daiyun.pgweb.action.ToIndexBlAction" method="deleteBulletin">
+		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+			<result name="success" type="redirect">/page/queryBulletin</result>
+		</action>
+		<!-- 验证公告标题是否存在 -->
+		<action name="headingAjax" class="com.daiyun.pgweb.action.ToIndexBlAction" method="headingAjax">
+		<interceptor-ref name="AuthInterceptor"></interceptor-ref>
+		</action>
+		<!-- 联系我们-->
+		<action name="qyBygmcode" class="com.daiyun.pgweb.action.GmItemAction" method="queryBygmcode">
+	   		<result name="success">/pg/frontPages/contact.jsp</result>
+	   </action>
+	   <!-- 查询工具 -->
+	   <action name="queryCode" class="com.daiyun.pgweb.action.GmItemActionTool" method="queryBygmcode">
+	   		<result name="success">/pg/frontPages/queryTool.jsp</result>
+	   </action>
+	   <!-- 全球机场查询-->
+    	<action name="cityAccesspossTool" class="com.daiyun.pgweb.action.QueryToolAction" method="worldAccess">    		
+    		<result name="success" type="chain">queryCode</result>    		
+    	</action>    	
+    	<!-- 偏远地区查询  -->
+    	<action name="remoteDistrictTool" class="com.daiyun.pgweb.action.QueryToolAction" method="remoteDistrictAccess">
+    		<result name="success" type="chain">queryCode</result> 
+    	</action>
+    	<!-- 港口查询  -->
+    	<action name="gangkouQueryTool" class="com.daiyun.pgweb.action.QueryToolAction" method="portAccessTool">
+    		<result name="success" type="chain">queryCode</result> 
+    	</action>
+    	<!-- 航空公司查询 -->
+    	<action name="airwayCompanyTool" class="com.daiyun.pgweb.action.QueryToolAction" method="airwayCompanyAccessTool">
+    		<result name="success" type="chain">queryCode</result> 
+    	</action>
+    	<!-- 成为供应商-->
+	   <action name="centerCode" class="com.daiyun.pgweb.action.GmItemAction" method="queryBygmcode">
+	   		<result name="success">/pg/frontPages/centerItem.jsp</result>
+	   </action>
+	   <!-- 新闻中心  -->
+	   <action name="newCode" class="com.daiyun.pgweb.action.BulletinAction" method="newQueryByCode">
+	    	<result name="success">/pg/frontPages/newsList.jsp</result>	    	
+	   </action>
+	   <!-- 查询新闻详细 -->
+	   <action name="qyByBlIdTool" class="com.daiyun.pgweb.action.ToIndexBlAction" method="queryByBlId">
+	   		<result name="success">/pg/frontPages/newsDetail.jsp</result>
+	   		<!--<result name="success">/item/newcountItem.jsp</result>-->
+	   </action>
+	   <!-- 产品 业务 -->
+	   <action name="productsCode" class="com.daiyun.pgweb.action.GmItemAction" method="queryBygmcode">
+	   		<result name="success">/pg/frontPages/productsShow.jsp</result>
+	   </action>
+	   <!-- 关于百千诚-->
+	   <action name="aboutCode" class="com.daiyun.pgweb.action.GmItemAction" method="queryBygmcode">
+	   		<result name="success">/pg/frontPages/aboutItem.jsp</result>
+	   </action>
+	    <!-- 单独报关 -->
+	     <action name="addAlonecustoms" class="com.daiyun.sfweb.action.OrderAction" method="addAlonecustoms">
+	    	<interceptor-ref name="AuthInterceptor"></interceptor-ref> 
+	    	<result name="success" type="redirect">/order/queryTransientOrders?link=transient</result>
+	    </action>	
+	    <!-- 业务界面运费试算-->
+	     <action name="costBudgetIndex" class="com.daiyun.pgweb.action.FeeAction" method="costBudgetIndex">
+	    	<result name="success" >/pg/frontPages/queryTool.jsp</result>
+	    </action>	
+	    <!-- 实名认证审核功能 -->
+	     <action name="idNumberConfirm" class="com.daiyun.pgweb.action.CustomerAction" method="idNumberConfirm">
+	    </action>	
+	    <!-- 查询指定用户 -->
+	     <action name="queryUsersByCon" class="com.daiyun.pgweb.action.CustomerAction" method="queryUsersByCon">
+	     <result name="success" >/pg/bulletin/listUser.jsp</result>
+	    </action>
+	    <!-- 修改身份验证状态 -->
+	    <action name="modifyIndentify" class="com.daiyun.pgweb.action.CustomerAction" method="modifyIndentify">
+	     <result name="success" >/pg/bulletin/listUser.jsp</result>
+	    </action>   
+	    <!-- 后台登录 -->
+        <action name="LoginManageAction" class="com.daiyun.pgweb.action.LoginManageAction" method="LoginManageAction">  
+           <result name="success" type="redirect">queryBulletin</result>
+           <result name="input">/pg/bulletin/login.jsp</result>
+        <result name="error">/pg/bulletin/login.jsp</result>  
+        </action>   
+  
+	</package>
+  
+</struts>

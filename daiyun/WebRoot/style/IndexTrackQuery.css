@@ -1,0 +1,116 @@
+/* CSS Document */
+/*------个人中心----------*/
+.member{ width:860px; padding-top:10px;}
+.member .left{ width:500px; float:left;}
+.member .right{ width:320px; float:right; padding:10px 14px; border:1px solid #ddd;}
+.member .personal{ width:478px; border:1px solid #dddddd; padding:10px;}
+.member .personal .portrait{ float:left; padding:30px 20px 0 10px;}
+.member .personal p{ padding-top:15px;}
+.member .personal p .exit{ padding-left:15px;}
+.member .personal p .exit a{ color:#02abee;}
+.member .personal ul{ float:left; margin-top:15px; font-size:14px; font-weight:bold;}
+.member .personal ul li a{ color:#333;}
+.member .personal ul li { width:80px; height:25px; line-height:25px; padding-left:30px; float:left;}
+.member .personal ul li.m_phone{ background:url(../images/m_phone.png) left center no-repeat;}
+.member .personal ul li.m_email{ background:url(../images/m_email.png) left center no-repeat;}
+.member .personal ul li.m_personal{ background:url(../images/m_personal.png) left center no-repeat;}
+.member .personal .unread{ float:left; margin:24px 0; width:175px; height:16px; border:1px solid #e1e1e1; background:#f9f9f9; padding:10px; text-align:center;}
+.member .personal .unread span{ padding:0 8px;}
+.member .personal .unread a{ color:#f00;}
+.member .personal .sum{ border-top:1px solid #ddd; padding:3px 0; font-size:14px; color:#666; font-weight:bold}
+.member .personal .sum p {border-top:1px solid #ddd;}
+.member .personal .sum table tr td{ padding:8px 0;}
+.member .process{ width:320px; height:307px; background:url(../images/m_map.png) no-repeat; color:#FFF; padding-top:25px; }
+.member .process a{ color:#FFF; width:77px; display:block; height:25px; line-height:25px;}
+.member .process table tr td{ padding-top:25px;}
+.member .recent_order{ width:860px; padding-top:10px;}
+.member .recent_order tr td{ border:1px solid #ddd;}
+/*------批量上传----------*/
+.batch{ width:860px;}
+.batch .download,.batch .upload{ width:858px; border:1px solid #dedede; margin-top:10px;}
+.batch .download h3,.batch .upload h3{ width:838px; height:28px; line-height:28px; padding-left:20px; background:#f8f8f8; font-size:14ppx; color:#333; border-bottom:1px solid #dedede;}
+.batch .download h3 span,.batch .upload h3 span{ font-size:12px; font-weight:normal; color:#F00; padding-left:5px;}
+.batch .download ul{ padding:10px 19px;}
+.batch .download ul li{ width:200px; float:left; height:36px; line-height:36px; font-size:14px; font-weight:bold; color:#02abee;}
+.batch .upload ul{ padding:10px 20px;}
+.batch .upload ul li{ line-height:30px;}
+.batch .upload .type select{ margin:10px 0; margin-left:10px; width:160px;}
+.batch .upload .type span{ color:#F00; padding-right:10px;}
+.batch .upload .custom{ margin:0 10px; width:806px; padding:15px; background:#f8f8f8; border:1px solid #dedede;}
+.batch .upload .custom p{ font-size:14px; font-weight:bold; color:#F00; padding-left:10px;}
+.batch .upload .custom p span{ font-size:12px; font-weight:normal; color:#333; padding-right:5px; line-height:36px;}
+.batch .upload .custom font{ padding-left:10px; line-height:36px; height:36px;}
+.batch .upload .up{ margin:20px 0 20px 60px; width:103px; height:27px; border:none; background:url(../images/upload.png);}
+
+.white_content { 
+display: none; 
+width: 40%; 
+height: 30%; 
+padding: 10px;
+border: 2px solid #666A76; 
+background-color:#E0E0E0; 
+z-index:1002; 
+overflow: auto;
+}
+/*------新建订单----------*/
+.order{ width:860px; padding-top:10px;}
+.order .nir{ width:818px; border:1px solid #dedede; background:#f8f8f8; padding:20px 20px 5px;}
+.order table tr td{ padding-bottom:15px;}
+.courier{ width:860px; padding-top:10px;}
+.courier .left{ width:425px; float:left;}
+.courier .right{ width:425px; float:right;}
+.courier .nir{ width:393px; border:1px solid #dedede; padding:15px 15px 0;}
+.courier table tr td{ padding-bottom:15px;}
+.goods{ width:860px; padding-top:10px;}
+.goods table{ border-collapse:collapse;}
+.goods table tr td{ border:1px solid #dedede; height:25px; line-height:25px; text-align:center;}
+.goods table tr td a{ padding:0 10px; color:#d42c96; text-decoration:underline;}
+.pop_up{ padding:20px;}
+.pop_up h3{ float:left; font-size:12px; font-weight:normal;}
+.pop_up a{ font-size:14px; font-weight:bold; color:#02abee; text-decoration:underline;}
+.pop_up span{ display:block;}
+.pop_up span a{ display:block; width:18px; height:18px; float:left; background:url(../images/r_more.png);}
+.submit{ text-align:center; padding-top:10px;}
+.Submit{ width:103px; border:none; height:27px; background:url(../images/submit.png);}
+.detailed{ width:860px; padding:20px 0 10px 0;}
+.detailed ul{ width:818px; border:1px solid #dedede; background:#f8f8f8; padding:10px 20px;}
+.detailed ul li { height:25px; line-height:25px; padding:8px 0;}
+/*------订单查询管理------*/
+.query{ width:860px; padding-top:10px;}
+.query .condition{ width:818px; border:1px solid #dedede; background:#f8f8f8; padding:20px 20px 5px;}
+.query .condition table tr td{ padding-bottom:15px;}
+.query .button .buttonbg{ margin:0 5px;}
+.all_orders{ width:860px; padding-top:10px;}
+.all_orders ul{ border-bottom:2px solid #02abee; width:860px; height:28px;}
+.all_orders ul li{ width:85px; padding:0 5px; float:left; height:28px; line-height:30px; text-align:center; font-size:14px; font-weight:bold;}
+.all_orders ul li.first { padding-left:0px;}
+.all_orders ul li a{ color:#333; display:block; width:85px; height:28px; background:url(../images/order_bg01.png);}
+.all_orders ul li a:hover,.all_orders ul li.first a{ color:#FFF; background:url(../images/order_bg.png);}
+.all_orders table{ border-collapse:collapse; margin-top:5px;}
+.all_orders table tr td{ border:1px solid #dedede; height:25px; line-height:25px; text-align:center;}
+/*------问题件管理------*/
+.problem{ width:860px; padding-top:10px;}
+.problem .condition{ width:818px; border:1px solid #dedede; background:#f8f8f8; padding:20px;}
+.problem .condition .left{ width:280px; float:left;}
+.problem .condition h3{ float:left; font-size:12px; font-weight:normal; padding-right:10px; line-height:20px;}
+.problem .condition table{ width:520px; float:right;}
+.problem .condition table tr{ height:24px; overflow:hidden;}
+.problem .condition table tr td{ height:24px; line-height:24px;}
+.order_box{ width:170px; height:100px; font-size:12px; padding:5px; line-height:20px;}
+/*------订单回收站------*/
+.recycle{ width:860px; padding-top:10px;}
+.recycle .condition{ width:818px; border:1px solid #dedede; background:#f8f8f8; padding:20px 20px 5px;}
+.recycle .condition table tr td{ padding-bottom:15px;}
+.recycle .condition table tr td span{ padding-left:7px;}
+.recycle .button .buttonbg{ margin:0 10px;}
+.recycle .result{overflow: scroll; width: 860px; height: 335px; margin-top:10px;}
+.recycle .result table{ border-collapse:collapse; }
+.recycle .result table tr td{ padding:5px 0; border:1px solid #ddd; text-align:center;}
+.recycle .result table tr td a{ color:#333;}
+/*------轨迹追踪------*/
+.tracing{ width:860px; padding-top:10px;}
+.tracing .search{ width:558px; border:1px solid #ddd; padding:15px 220px; background:#f8f8f8;}
+.tracing .search textarea{ width:554px; padding:10px; height:91px; background:url(../images/tracing_bg.png) no-repeat; border:none; font-size:14px; color:#999999; line-height:22px; overflow-y:hidden; border-radius:6px; resize: none; outline: none; }
+.tracing .search .line_button{ width:554px; text-align:center; padding-top:15px;}
+.tracing .search .line_button .buttonbg{ color:#FFF; width:69px; height:27px; line-height:27px; background:url(../images/button_bg.png); border:none;}
+

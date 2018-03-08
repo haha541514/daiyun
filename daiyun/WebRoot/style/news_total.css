@@ -1,0 +1,118 @@
+/* CSS Document */
+/*------全局定义----------*/
+*{ padding:0px; margin:0px;}
+html{ background:#ffffff;}
+body{font:12px "宋体"; color:#333;}
+img{ border:none;}  
+a{ text-decoration:none;}
+ul{ list-style:none;}
+input,select,button{ font:12px Verdana,Arial,Tahoma; vertical-align:middle;}
+select{ border:none;}
+.clear{ clear:both; height:0px; overflow: hidden;}
+/*------网站头部------*/
+#top{ width:100%;}
+.top{ width:1000px; margin:0 auto;}
+.top .window{ width:100%; height:30px;}
+.top .window .left{ float:left; width:20px;}
+.top .window .right{ float:right; width:169px; padding:0 13px; height:30px; line-height:30px; background:url(../images/topbg.jpg); color:#FFF;}
+.top .window .right span a{ color:#FFF;}
+.top .window .right span a:hover{ color:#FFF;}
+.logo{ width:100%; height:67px; padding:20px 0;}
+.logo .left{ float:left; width:232px; height:67px;}
+.logo .right{ float:right; width:315px; height:37px; padding:15px 0;}
+.nav{ width:100%; height:55px; background:url(../images/navbg.jpg) repeat-x bottom;}
+.nav ul{  width:819px; padding-top:5px; height:45px; line-height:45px; list-style:none; float:left;}
+.nav ul li{ list-style:none; float:left; font-size:16px; font-weight:bold; border-left:1px solid #FFF;}
+.nav ul li.first{ border:none;}
+.nav ul li a { color:#FFF; padding:0 35px; display:block; }
+.nav ul li a:hover,.nav ul li.first a{ height:42px; background:#d42c96; border-bottom:3px solid #02abee;}
+.nav .nav_last{ float:right; width:181px; height:55px; background:url(../images/my_nav.jpg);}
+
+/*------广告图------*/
+.banner_bg{ width:100%; margin:0 auto; height:466px; overflow:hidden;}
+.banner {
+	height: 466px;
+    left: 50%;
+    margin: 0 auto 0 -890px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 1780px;
+    
+	
+}
+
+.banner a{
+    color:#666;
+	}
+
+.banner .nav_img{ 
+   width:1780px; 
+   height:466px; 
+   overflow:hidden;
+   display:block;
+   }
+   
+.banner .nav_img li{
+   display:block;
+   float:left;
+   }
+   
+.banner .nav_img img{ 
+   width:1780px; 
+   height:466px; 
+   display:block;
+   }
+   
+.banner .nav_banner{ 
+   width:100px; 
+   height:15px; 
+   bottom:20px;
+    position: absolute;
+    right:890px;
+   }   
+   
+.banner .nav_banner li{ 
+   display:block; 
+   float:left; 
+   width:15px;
+   height:15px;
+   margin-right:5px; 
+   background:url(../images/22.png) no-repeat;
+   }
+   
+.banner .nav_banner li a{ 
+   display:block; 
+   width:15px;
+   }
+   
+.banner .this {
+   display:block;
+   padding:0;
+   margin:0;  
+   }
+        
+.banner .this a{ 
+   display:block;
+   width:15px;
+   height:15px;
+   background:url(../images/11.png) no-repeat;
+   }
+   
+/*--业务展示----*/
+#content{ height:150px; width:980px; margin:10px auto;}
+#content #content_left{ width:242px; height:136px; float:left; border:1px solid #ddd; padding:6px 10px;}
+#content #content_center{ width:388px; height:142px; float:left; margin:0px 10px; border:1px solid #ddd; padding:6px 10px 0px 10px;}
+#content #content_center ul{ margin-top:5px;}
+#content #content_center ul li{ height:20px; line-height:20px; display:block;}
+#content #content_center ul li a{ float:left; text-indent:10px; background:url(../images/dot.jpg) no-repeat 0px 8px;}
+#content #content_center ul li span{ color:#666px; float:right; margin-right:10px; font-family:Verdana, Geneva, sans-serif; font-size:10px; color:#999}
+   
+/*------网站底部------*/
+#bottom{ width:100%; margin-top:20px;}
+.copyright{ width:100%; height:127px; background:url(../images/copy_bg.jpg) repeat-x;}
+.copyright .nir{ width:1000px; margin:0 auto; height:127px;}
+.copyright .nir .left{ padding-top:50px; float:left; line-height:24px; color:#7f7f7f;}
+.copyright .nir .right{ float:right; padding-top:40px;}
+.bottom_nav{ width:100%; height:33px; line-height:33px; text-align:center; background:#02abee; color:#FFF;}
+.bottom_nav a{ color:#FFF;}
